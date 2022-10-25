@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2156664.jpg" />
+    <None Remove="7378196.png" />
+    <None Remove="depositphotos_5323703-stock-photo-sign-radiation.jpg" />
+    <None Remove="fb_icon_325x325.png" />
+    <None Remove="Images\1026345.jpeg" />
+    <None Remove="Images\2156664.jpg" />
+    <None Remove="Images\62e3d05345443a000da0a372_optimized_115.png" />
+    <None Remove="Images\7378196.png" />
+    <None Remove="Images\batsiev-round-photo-1.png" />
+    <None Remove="Images\depositphotos_5323703-stock-photo-sign-radiation.jpg" />
+    <None Remove="Images\Event icon.png" />
+    <None Remove="Images\fb_icon_325x325.png" />
+    <None Remove="Images\Home icon unactive.png" />
+    <None Remove="Images\logo 5 small-01.png" />
+    <None Remove="Images\Messages icon.png" />
+    <None Remove="Images\Notifications icon.png" />
+    <None Remove="Images\settings icon test.png" />
+    <None Remove="Images\Work icon.png" />
+    <None Remove="logo 5 small-01.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Work icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2156664.jpg" />
+    <Resource Include="7378196.png" />
+    <Resource Include="fb_icon_325x325.png" />
+    <Resource Include="Images\1026345.jpeg" />
+    <Resource Include="Images\2156664.jpg" />
+    <Resource Include="Images\62e3d05345443a000da0a372_optimized_115.png" />
+    <Resource Include="Images\7378196.png" />
+    <Resource Include="Images\batsiev-round-photo-1.png" />
+    <Resource Include="Images\depositphotos_5323703-stock-photo-sign-radiation.jpg" />
+    <Resource Include="Images\Event icon.png" />
+    <Resource Include="Images\fb_icon_325x325.png" />
+    <Resource Include="Images\Home icon unactive.png" />
+    <Resource Include="Images\logo 5 small-01.png" />
+    <Resource Include="Images\Messages icon.png" />
+    <Resource Include="Images\Notifications icon.png" />
+    <Resource Include="Images\settings icon test.png" />
+    <Resource Include="logo 5 small-01.png" />
+  </ItemGroup>
+
+</Project>
