@@ -8,7 +8,7 @@
         Title="Register" Height="1024" Width="1440">
     <Window.Resources>
         <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontSize" Value="30" />
         </Style>
 
 
@@ -391,8 +391,8 @@
                 </Button.Resources>
             </Button>
 
-            <TextBlock Style="{Binding header}" HorizontalAlignment="Center" FontSize="24" Foreground="#FF6B6B6B" FontFamily="Global User Interface" Margin="0,30,0,0">Start building your team</TextBlock>
-            <TextBlock Style="{Binding smallText}" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Global User Interface" FontSize="18" Foreground="#FFB8B8B8">Sign up with</TextBlock>
+            <TextBlock  HorizontalAlignment="Center" FontSize="30" Foreground="#FF6B6B6B" FontFamily="Global User Interface" Margin="0,30,0,0">Start building your team</TextBlock>
+            <TextBlock  Grid.Row="1" HorizontalAlignment="Center" FontFamily="Global User Interface" FontSize="25" Foreground="#FFB8B8B8">Sign up with</TextBlock>
             <Image Width="50" MaxHeight="50" Grid.Row="2" Source="/7378196.png" Margin="0,5,100,5"></Image>
             <Image Width="50" MaxHeight="50" Grid.Row="2" Source="/fb_icon_325x325.png" Margin="0,5,-100,5"></Image>
             <Image Margin ="0,0,5,0" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Source="/2156664.jpg"></Image>
