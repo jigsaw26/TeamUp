@@ -60,7 +60,7 @@
                 <!--Кнопка Settings-->
                 <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Label</Label>
+                    <Label FontSize="24" Margin="20,0,0,0">Settings</Label>
                 </StackPanel>
             </Grid>
         </StackPanel>
