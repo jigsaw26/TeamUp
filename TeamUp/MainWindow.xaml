@@ -6,8 +6,6 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-<!--к321к12-->
-        <Button>12412 </Button>
+    <Grid> 
     </Grid>
 </Window>
