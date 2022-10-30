@@ -30,37 +30,37 @@
                 <!--Кнопка Home-->
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Home</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Home"></Button> 
                 </StackPanel>
 
                 <!--Кнопка Messages-->
                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Messages icon.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Messages</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Messages"></Button> 
                 </StackPanel>
 
                 <!--Кнопка Notification-->
                 <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Notifications icon.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0" IsEnabled="False">Notification</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Notification"></Button> 
                 </StackPanel>
 
                 <!--Кнопка Events-->
                 <StackPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Event icon.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Events</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Events"></Button> 
                 </StackPanel>
 
                 <!--Кнопка Work-->
                 <StackPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Work icon.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Work</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Work"></Button> 
                 </StackPanel>
 
                 <!--Кнопка Settings-->
                 <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                    <Label FontSize="24" Margin="20,0,0,0">Settings</Label>
+                    <Button FontSize="24" Margin="20,0,0,0" Content="Settings"></Button> 
                 </StackPanel>
             </Grid>
         </StackPanel>
