@@ -22,10 +22,14 @@ namespace TeamUp
         public Profile()
         {
             InitializeComponent();
-        }
-   
+        } 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void B_Home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();

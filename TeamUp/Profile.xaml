@@ -17,7 +17,7 @@
             <Image Width="100" Height="100" Margin="57,23,0,0" HorizontalAlignment="Left" Source="logo 5 small-01.png"></Image>
             <TextBox Width="296" Height="46" Margin="57,23,0,0"></TextBox>
 
-            <Grid Height="350" Margin="57,43,0,0" IsEnabled="False">
+            <Grid Height="350" Margin="57,43,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -30,38 +30,39 @@
                 <!--Кнопка Home-->
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Home"></Button> 
+                    <Button x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Click="B_Home_Click" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Messages-->
                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Messages icon.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Messages"></Button> 
+                    <Button x:Name="B_Messages" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Notification-->
                 <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Notifications icon.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Notification"></Button> 
+                    <Button x:Name="B_Notification" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Events-->
                 <StackPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Event icon.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Events"></Button> 
+                    <Button x:Name="B_Events" FontSize="24" Margin="20,0,0,0" Content="Events" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Work-->
                 <StackPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Work icon.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Work"></Button> 
+                    <Button x:Name="B_Work" FontSize="24" Margin="20,0,0,0" Content="Work" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Settings-->
                 <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                    <Button FontSize="24" Margin="20,0,0,0" Content="Settings"></Button> 
+                    <Button x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Click="B_Settings_Click" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                 </StackPanel>
+
             </Grid>
         </StackPanel>
 
