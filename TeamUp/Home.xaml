@@ -55,7 +55,7 @@
                     <!--Кнопка Home-->
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
-                        <Button x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Click="B_Home_Click" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                        <Button x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Messages-->
@@ -85,7 +85,7 @@
                     <!--Кнопка Settings-->
                     <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                        <Button x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Click="B_Settings_Click" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                        <Button x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                     </StackPanel>
 
                 </Grid>
