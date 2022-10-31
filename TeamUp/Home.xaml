@@ -22,13 +22,21 @@
                 <!--ссылка на пользователя-->
                 <Grid Height="206" Width="296" Margin="27,0,0,0">
 
-                    
-                    
-                    <Border CornerRadius="35" Background="White" Grid.RowSpan="3">
+                    <Border Background="White" CornerRadius="35" Grid.RowSpan="3">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"/>
                         </Border.Effect>
                     </Border>
+
+                    <StackPanel>
+                        <Image Source="Images/batsiev-round-photo-1.png" Height="79" Width="77" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                        <TextBlock Text="Andrew Rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6B6B6B" FontSize="18"></TextBlock>
+                        <TextBlock Text="@andrew_rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#959595" FontSize="12"></TextBlock>
+                        <Line  Stroke="#B8B8B8" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+                        <TextBlock Margin="0,10,0,0" Text="Developer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#B8B8B8" FontSize="18"></TextBlock>
+                    </StackPanel>
+
+                    
                 </Grid>
                 
 
@@ -184,9 +192,6 @@
                             </Style>
                         </ListBox.Resources>
 
-                        <ListBoxItem>
-                            
-                        </ListBoxItem>
                         
                     </ListBox>
 
