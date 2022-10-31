@@ -93,7 +93,7 @@
                         <ImageBrush ImageSource="/Images/devbg.jpg">
                         </ImageBrush>
                     </Grid.Background>
-                </Grid>
+                </Grid> 
 
                     <!--последняя строка-->
                 <Button Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20,0,20,20" FontSize="24" Width="325" Height="55" Content="Back Home" BorderBrush="#FDDC08" Background="#FDDC08" Foreground="White">
