@@ -26,13 +26,43 @@ namespace TeamUp
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {
-
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
         }
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();
+            Close();
+        }
+
+        private void B_Messages_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Notification_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Events_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Work_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
             Close();
         }
     }
