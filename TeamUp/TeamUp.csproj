@@ -18,6 +18,7 @@
     <None Remove="Images\7378196.png" />
     <None Remove="Images\batsiev-round-photo-1.png" />
     <None Remove="Images\depositphotos_5323703-stock-photo-sign-radiation.jpg" />
+    <None Remove="Images\devbg.jpg" />
     <None Remove="Images\Event icon.png" />
     <None Remove="Images\fb_icon_325x325.png" />
     <None Remove="Images\Home icon unactive.png" />
@@ -30,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\devbg.jpg" />
     <Resource Include="Images\Work icon.png" />
   </ItemGroup>
 
