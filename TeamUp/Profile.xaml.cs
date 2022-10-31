@@ -26,8 +26,8 @@ namespace TeamUp
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {
-            InDev indev = new InDev();
-            indev.Show();
+            Home home = new Home();
+            home.Show();
             Close();
         }
 
