@@ -32,7 +32,7 @@
                         <Image Source="Images/batsiev-round-photo-1.png" Height="79" Width="77" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
                         <TextBlock Text="Andrew Rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6B6B6B" FontSize="18"></TextBlock>
                         <TextBlock Text="@andrew_rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#959595" FontSize="12"></TextBlock>
-                        <Line  Stroke="#B8B8B8" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+                        <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
                         <TextBlock Margin="0,10,0,0" Text="Developer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#B8B8B8" FontSize="18"></TextBlock>
                     </StackPanel>
 
@@ -112,7 +112,6 @@
 
                 <Grid Margin="0,30,0,0">
                     <Grid.RowDefinitions>
-                        <RowDefinition ></RowDefinition>
                         <RowDefinition Height="2*"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
@@ -123,9 +122,41 @@
                         </Border.Effect>
                     </Border>
 
+                        <WrapPanel>
+                            <Image Source="Images/batsiev-round-photo-1.png" Height="62" Width="64" VerticalAlignment="Top" Margin="20,10,0,0"></Image>
+                            <TextBlock Text="What's new?" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="18" Foreground="#B8B8B8"></TextBlock>
+                            <Button  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="370,0,0,0"   FontSize="20" Width="105" Height="39" Content="Post" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </WrapPanel>
+                    
+                        <WrapPanel Grid.Row="1">
+                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="100,0,0,0">
+                                <Image Source="Images/Image icon.png" Width="15" Height="15"  ></Image>
+                            </Button>
+                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Image Source="Images/GIF icon.png" Width="15" Height="15"></Image>
+                            </Button>
+                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Image Source="Images/Graph icon.png" Width="15" Height="15"></Image>
+                            </Button>
+                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Image Source="Images/Emoji icon.png" Width="15" Height="15" ></Image>
+                            </Button>
+                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Image Source="Images/Place icon.png" Width="15" Height="15" ></Image>
+                            </Button>
+
+                           
+                        </WrapPanel>
+                    
                 </Grid>
             </Grid>
-                
+                    
             
             <!--макет поста-->
             <Grid Grid.Column="1" Grid.Row="1">
@@ -137,8 +168,7 @@
 
                 <Grid Margin="0,30,0,0">
                     <Grid.RowDefinitions>
-                        <RowDefinition ></RowDefinition>
-                        <RowDefinition Height="2*"></RowDefinition>
+                       <RowDefinition Height="2*"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
@@ -184,16 +214,7 @@
                 
                 
                 <!--новости-->
-                <Grid Grid.Row="1">
-                    <ListBox Width="296" Height="505" VerticalAlignment="Center">
-                        <ListBox.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="30"/>
-                            </Style>
-                        </ListBox.Resources>
-
-                        
-                    </ListBox>
+                <Grid Grid.Row="1"  Width="296" Height="505">
 
                     <Border CornerRadius="30" Background="White" Width="296" Height="505">
                         <Border.Effect>
@@ -201,24 +222,137 @@
                         </Border.Effect>
                     </Border>
 
+
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">What's new</TextBlock>
+
+                        <StackPanel>
+                            <TextBlock Margin="30,20,5,5" Foreground="#B8B8B8" FontSize="10">Theme| Trending</TextBlock>
+                            <TextBlock HorizontalAlignment="Left" Margin="30,0,0,0" Foreground="#585858" FontSize="10" Width="216" Height="43" FontWeight="Bold"> Cras interdum tortor at augue eleifend</TextBlock>
+                            <Button Margin="0,-100,10,0" HorizontalAlignment="Right" BorderBrush="White" Background="White" FontSize="15" FontWeight="Bold" Foreground="#585858" Width="30" Height="25">. . .</Button>
+                            <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Margin="30,20,5,5" Foreground="#B8B8B8" FontSize="10">Theme| Trending</TextBlock>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="30,0,0,0" Foreground="#585858" FontSize="10" Width="216" Height="43"> Pellentesque laoreet tellus id </TextBlock>
+                            <Button Margin="0,-100,10,0" HorizontalAlignment="Right" BorderBrush="White" Background="White" FontSize="15" FontWeight="Bold" Foreground="#585858" Width="30" Height="25">. . .</Button>
+                            <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Margin="30,20,5,5" Foreground="#B8B8B8" FontSize="10">Theme| Trending</TextBlock>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="30,0,0,0" Foreground="#585858" FontSize="10" Width="216" Height="43"> Morbi laoreet sagitporttitor lobortis.</TextBlock>
+                            <Button Margin="0,-100,10,0" HorizontalAlignment="Right" BorderBrush="White" Background="White" FontSize="15" FontWeight="Bold" Foreground="#585858" Width="30" Height="25">. . .</Button>
+                            <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Margin="30,20,5,5" Foreground="#B8B8B8" FontSize="10">Theme| Trending</TextBlock>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="30,0,0,0" Foreground="#585858" FontSize="10" Width="216" Height="43"> Aliquam sapien odio viverra in magna. d</TextBlock>
+                            <Button Margin="0,-100,10,0" HorizontalAlignment="Right" BorderBrush="White" Background="White" FontSize="15" FontWeight="Bold" Foreground="#585858" Width="30" Height="25">. . .</Button>
+                            <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+                        </StackPanel>
+
+                        <Button Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,30,150,0" FontSize="15" Height="20" Width="80"> Show More</Button>
+
+                    </StackPanel>
+
+                        
+
+
                 </Grid>
                 
                 
                 <!--рекомендация follow-->
                 <Grid Grid.Row="2">
-                    <ListBox Width="296" Height="356" VerticalAlignment="Center">
-                        <ListBox.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="30"/>
-                            </Style>
-                        </ListBox.Resources>
-                    </ListBox>
 
                     <Border CornerRadius="30" Background="White" Width="296" Height="356">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"/>
                         </Border.Effect>
                     </Border>
+
+
+                    <StackPanel  Width="296" Height="356">
+                        <TextBlock HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">Who to follow</TextBlock>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="Images/images.jpg" Width="60" Height="60" Margin="0,10,0,0"></Image>
+                            <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@paul_j</TextBlock>
+                            <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Paul J.</TextBlock>
+                            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                            <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="Images/Nikolia-round-image_.png" Width="60" Height="60" Margin="0,10,0,0"></Image>
+                            <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@ann_h</TextBlock>
+                            <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Ann H.</TextBlock>
+                            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                        <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="Images/portrait-Kellermanns-round-e1575028630748-p443ff8adeueut8nnk2obtewhw7c3uza7177fsmppc.png" Width="60" Height="60" Margin="0,10,0,0"></Image>
+                            <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@peter_o</TextBlock>
+                            <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Peter O.</TextBlock>
+                            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                        <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+
+
+
+                        <Button Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="20" Width="80">Show More</Button>
+
+                    </StackPanel>
+
+
+                   
 
                 </Grid>
                 
