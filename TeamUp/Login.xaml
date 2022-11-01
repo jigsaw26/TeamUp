@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Login" Height="1024" Width="1440">
 
     <Window.Resources>
@@ -15,7 +16,6 @@
                 <ResourceDictionary Source="BasicStyles0.1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
     </Window.Resources>
 
 
@@ -24,7 +24,7 @@
             <RowDefinition Height="0.15*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <GroupBox  BorderThickness="1" Grid.Row="1" Height="736" Width="936">
+        <GroupBox  BorderThickness="0" Grid.Row="1" Height="736" Width="936">
             <Border Grid.Column="1" CornerRadius="8" Background="White" Grid.Row="1">
                 <Border.Effect>
                     <DropShadowEffect ShadowDepth="3" Opacity="0.5" Direction="1000" BlurRadius="30"/>
@@ -45,6 +45,41 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1">
                 <Label FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right">Don't have an account</Label>
                 <Button Margin="20,0,20,0" FontSize="18" Width="188" Height="42" Content="Get Started" BorderBrush="#FF7C7C7C" Background="White" Foreground="Black" Click="Button_Click">
+                    <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                            <Border.Background>
+                                <SolidColorBrush x:Name="BorderColor" Color="White" />
+                            </Border.Background>
+                            <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState Name="Normal">
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Border>
+                    </ControlTemplate>
+                    </Button.Template>
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="15"/>
@@ -106,12 +141,8 @@
                 <TextBox BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></TextBox>
             </Grid>
 
-            <Button Background="Orange" Grid.Row="4" FontSize="15" Width="325" Height="55" Content="Sign In" Foreground="White" BorderBrush="White">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="15"/>
-                    </Style>
-                </Button.Resources>
+            <Button Style="{StaticResource BtnAnim}"  Grid.Row="4" FontSize="15" Width="325" 
+                    Height="55" Content="Sign In">
             </Button>
 
         </Grid>

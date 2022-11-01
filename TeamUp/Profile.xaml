@@ -5,7 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="1024" Width="1440">
+    <Window.Resources>
+
+        
+        <Style x:Key="BtnStyle">
+            <Style.Setters>
+                <Setter Property="Button.FontSize" Value="25"></Setter>
+                <Setter Property="Button.VerticalContentAlignment" Value="Center"></Setter>
+                <Setter Property="Button.Background" Value="White"></Setter>
+                <Setter Property="Button.BorderThickness" Value="0"></Setter>
+                <Setter Property="Button.Width" Value="250"></Setter>
+                <Setter Property="Button.Height" Value="50" ></Setter>
+                <Setter Property="Button.HorizontalContentAlignment" Value="Left"></Setter>
+                <Setter Property="Button.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="Border">
+                                <Grid>
+                                    <Rectangle Name="FocusCue" Visibility="Hidden"
+                        StrokeThickness="1" StrokeDashArray="1 2"/>
+                                    <ContentPresenter Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#FFE2E2E2" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Black" />
+                                    <Setter TargetName="Border" Property="Background" Value="MistyRose" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="360"></ColumnDefinition>
@@ -30,37 +70,37 @@
                 <!--Кнопка Home-->
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
-                    <Button x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Click="B_Home_Click" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Button x:Name="B_Home" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Home" Click="B_Home_Click" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 </StackPanel>
 
                 <!--Кнопка Messages-->
                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Messages icon.png"></Image>
-                    <Button x:Name="B_Messages" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Messages_Click"/>
+                    <Button x:Name="B_Messages" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Messages_Click"/>
                 </StackPanel>
 
                 <!--Кнопка Notification-->
                 <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Notifications icon.png"></Image>
-                    <Button x:Name="B_Notification" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Notification_Click"/>
+                    <Button x:Name="B_Notification" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Notification_Click"/>
                 </StackPanel>
 
                 <!--Кнопка Events-->
                 <StackPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Event icon.png"></Image>
-                    <Button x:Name="B_Events" FontSize="24" Margin="20,0,0,0" Content="Events" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Events_Click"/>
+                    <Button x:Name="B_Events" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Events" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Events_Click"/>
                 </StackPanel>
 
                 <!--Кнопка Work-->
                 <StackPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/Work icon.png"></Image>
-                    <Button x:Name="B_Work" FontSize="24" Margin="20,0,0,0" Content="Work" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Work_Click"/>
+                    <Button x:Name="B_Work" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Work" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Work_Click"/>
                 </StackPanel>
 
                 <!--Кнопка Settings-->
                 <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                    <Button x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Click="B_Settings_Click" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                    <Button x:Name="B_Settings" Style="{StaticResource BtnStyle}" FontSize="24" Margin="20,0,0,0" Content="Settings" Click="B_Settings_Click" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                 </StackPanel>
 
             </Grid>
@@ -81,7 +121,7 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Border CornerRadius="35" Background="White" Grid.RowSpan="2">
+                <Border CornerRadius="35" Background="white" Grid.RowSpan="2">
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"/>
                     </Border.Effect>
@@ -108,7 +148,42 @@
                     </Grid.ColumnDefinitions>
 
                     <!--Первая строка-->
-                    <Button Grid.Column="1" HorizontalAlignment="Right" Margin="20,0,20,0" FontSize="18" Width="162" Height="42" Content="Edit Profile" BorderBrush="#FF7C7C7C" Background="White" Foreground="Black">
+                    <Button Grid.Column="1" HorizontalAlignment="Right" Margin="20,0,20,0" FontSize="18" Width="162" Height="42" Content="Edit Profile" BorderBrush="White" Background="White" Foreground="Black" Click="Button_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                                    <Border.Background>
+                                        <SolidColorBrush x:Name="BorderColor" Color="White" />
+                                    </Border.Background>
+                                    <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="MouseOver">
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState Name="Normal">
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="15"/>

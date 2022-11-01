@@ -5,10 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Register" Height="1024" Width="1440">
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="30" />
+        </Style>
+        <Style x:Key="BtnAnim">
+            <Setter Property="Button.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border  BorderThickness="3" CornerRadius="15"
+                Background="Orange" TextBlock.Foreground="White" Name="Border">
+                            <Grid>
+                                <Rectangle Name="FocusCue" Visibility="Hidden"
+                        StrokeThickness="1" StrokeDashArray="1 2"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FFBD7A00" />
+
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FF5A3A00" />
+
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="FocusCue" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Gray" />
+                                <Setter TargetName="Border" Property="Background" Value="MistyRose" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <!--dsfdfgfgd-->
@@ -303,7 +339,13 @@
                 <RowDefinition ></RowDefinition>
             </Grid.RowDefinitions>
 
-            <ListBox Grid.Row="3" Margin="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox Grid.Row="3" Margin="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Focusable" Value="False" />
+ 
+                    </Style>
+                </ListBox.ItemContainerStyle>
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">YOUR NAME</TextBlock>
@@ -388,12 +430,8 @@
                 </StackPanel>
             </ListBox>
 
-            <Button Margin="20,5,20,5" BorderBrush="#FAB810" Background="#FAB810" Foreground="White"  Grid.Row="4" Content="Start Using TeamUp" Click="Button_Click">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="15"/>
-                    </Style>
-                </Button.Resources>
+            <Button Style="{StaticResource BtnAnim}" Margin="20,5,20,5" Foreground="White"  Grid.Row="4" Content="Start Using TeamUp" Click="Button_Click">
+               
             </Button>
 
             <TextBlock  HorizontalAlignment="Center" FontSize="30" Foreground="#FF6B6B6B" FontFamily="Global User Interface" Margin="0,30,0,0">Start building your team</TextBlock>
@@ -411,6 +449,41 @@
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1">
             <Label VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="#FFB8B8B8">Don't have an account</Label>
             <Button Margin="20,0,20,0" Width="120" Content="Get Started" BorderBrush="#FF7C7C7C" Background="White" Foreground="#FFB8B8B8">
+                <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                        <Border.Background>
+                            <SolidColorBrush x:Name="BorderColor" Color="White" />
+                        </Border.Background>
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
+                </Button.Template>
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>

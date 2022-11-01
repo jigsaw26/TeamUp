@@ -23,5 +23,12 @@ namespace TeamUp
         {
             InitializeComponent();
         }
+
+        private void B_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.Show();
+            Close();
+        }
     }
 }
