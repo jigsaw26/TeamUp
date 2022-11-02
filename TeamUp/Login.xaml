@@ -137,8 +137,8 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label FontSize="18">YOUR PASSWORD</Label>
-                <TextBox BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></TextBox>
+                <Label FontSize="18">YOUR PASSWORD</Label> 
+                <PasswordBox BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></PasswordBox>
             </Grid>
 
             <Button Style="{StaticResource BtnAnim}"  Grid.Row="4" FontSize="15" Width="325" 
@@ -151,3 +151,4 @@
 
     </Grid>
 </Window>
+ 

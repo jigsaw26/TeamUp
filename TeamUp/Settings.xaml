@@ -118,6 +118,36 @@
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
         </Style>
+
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border Name="Border"
+                CornerRadius="15"
+                BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="White" />
+                            </Border.Background>
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#FFB8B8B8" />
+                            </Border.BorderBrush>
+
+                            <ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+        </Style>
+
+
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="18"></Setter>
             <Setter Property="Foreground" Value="#FFB8B8B8"></Setter>
@@ -187,11 +217,11 @@
             <Label FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
                Foreground="Black" FontWeight="Bold" Margin="50,20,0,0">Change Password</Label>
             <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,100,0,0"> Enter old password:</Label>
-            <TextBox Width="250" Height="50" Margin="0,200,220,0"></TextBox>
+            <PasswordBox Width="250" Height="50" Margin="0,200,220,0"></PasswordBox>
             <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,300,0,0">Enter new password:</Label>
-            <TextBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,50,220,0"></TextBox>
+            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,50,220,0"></PasswordBox>
             <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,150,0,0">Again new password:</Label>
-            <TextBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,250,220,0"></TextBox>
+            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,250,220,0"></PasswordBox>
             <Button Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
                     HorizontalAlignment="Left" Margin="50,50,0,0">
                 <Button.Resources>

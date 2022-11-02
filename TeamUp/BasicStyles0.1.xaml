@@ -85,6 +85,39 @@
         <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
         <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
     </Style>
+
+
+    <Style TargetType="PasswordBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Name="Border"
+                CornerRadius="15"
+                BorderThickness="2">
+                        <Border.Background>
+                            <SolidColorBrush Color="White" />
+                        </Border.Background>
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="#FFB8B8B8" />
+                        </Border.BorderBrush>
+
+                        <ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+                    </Border>
+                </ControlTemplate> 
+            </Setter.Value>
+        </Setter>
+        
+        
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+    </Style>
+
+
+
+
+
     <Style TargetType="Label">
         <Setter Property="FontSize" Value="18"></Setter>
         <Setter Property="Foreground" Value="#FFB8B8B8"></Setter>

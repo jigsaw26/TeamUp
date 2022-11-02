@@ -11,6 +11,30 @@
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="30" />
         </Style>
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border Name="Border"
+                CornerRadius="10"
+                BorderThickness="1">
+                            <Border.Background>
+                                <SolidColorBrush Color="White" />
+                            </Border.Background>
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#FFB8B8B8" />
+                            </Border.BorderBrush>
+
+                            <ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+        </Style>
+
         <Style x:Key="BtnAnim">
             <Setter Property="Button.Template">
                 <Setter.Value>
@@ -385,7 +409,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">COUNTRY</TextBlock>
-                        <TextBox Width="545" Height="31">
+                        <TextBox Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -409,24 +433,12 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">PASSWORD</TextBlock>
-                        <TextBox  Width="546">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
+                        <PasswordBox  Width="546"></PasswordBox>
                     </StackPanel>
                 </ListBoxItem>
                 <StackPanel>
                     <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">REPEAT PASSWORD</TextBlock>
-                    <TextBox  Width="545">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
+                    <PasswordBox  Width="545"></PasswordBox>
                 </StackPanel>
             </ListBox>
 
