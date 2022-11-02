@@ -129,37 +129,37 @@
                     <!--Кнопка Home-->
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Width="140px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Messages-->
                     <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/Messages icon.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Messages" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Messages" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="140px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Notification-->
                     <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/Notifications icon.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Notification" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="130px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Notification" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="140px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Events-->
                     <StackPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/Event icon.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Events" FontSize="24" Margin="20,0,0,0" Content="Events" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Events" FontSize="24" Margin="20,0,0,0" Content="Events" Width="140px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Work-->
                     <StackPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/Work icon.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Work" FontSize="24" Margin="20,0,0,0" Content="Work" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Work" FontSize="24" Margin="20,0,0,0" Content="Work" Width="140px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}"/>
                     </StackPanel>
 
                     <!--Кнопка Settings-->
                     <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                         <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
-                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Width="130px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Settings_Click"/>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Width="140px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Settings_Click"/>
                     </StackPanel>
 
                 </Grid>

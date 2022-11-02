@@ -463,7 +463,7 @@
             <Button Margin="20,0,20,0" Width="120" Content="Get Started" BorderBrush="#FF7C7C7C" Background="White" Foreground="#FFB8B8B8">
                 <Button.Template>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="25"
+                    <Border CornerRadius="15"
                 BorderBrush="Black"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 Height="{TemplateBinding Height}"
@@ -498,7 +498,7 @@
                 </Button.Template>
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="15"/>
+                        <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
