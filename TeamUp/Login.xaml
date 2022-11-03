@@ -141,8 +141,8 @@
                 <PasswordBox BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></PasswordBox>
             </Grid>
 
-            <Button Style="{StaticResource BtnAnim}"  Grid.Row="4" FontSize="15" Width="325" 
-                    Height="55" Content="Sign In">
+            <Button Style="{StaticResource BtnAnim}" Grid.Row="4" FontSize="15" Width="325" 
+                    Height="55" Content="Sign In" Click="Button_Click_1">
             </Button>
 
         </Grid>

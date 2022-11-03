@@ -22,13 +22,21 @@ namespace TeamUp
         public Login()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.WindowState.Maximized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //registration click
         {
 
             Register reg = new Register();
             reg.Show();
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) //profile click
+        {
+            Profile prof = new Profile();
+            prof.Show();
             Close();
         }
     }

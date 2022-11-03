@@ -22,12 +22,55 @@ namespace TeamUp
         public Home()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.WindowState.Maximized;
+        }
+
+        private void B_Home_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            Close();
         }
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();
+            Close();
+        }
+
+        private void B_Messages_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Notification_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Events_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void B_Work_Click(object sender, RoutedEventArgs e)
+        {
+            InDev indev = new InDev();
+            indev.Show();
+            Close();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e) //profile click -> profile page 
+        {
+            Profile prof = new Profile();
+            prof.Show();
             Close();
         }
     }

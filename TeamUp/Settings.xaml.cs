@@ -78,5 +78,17 @@ namespace TeamUp
                 if (Tbox_Search.Text == B_Security.Content.ToString()) B_Security_Click(sender, e); 
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ConfilrmWindow confilrmWindow = new ConfilrmWindow();
+            if (confilrmWindow.ShowDialog() == true)
+            {
+                Login log = new Login();
+                log.Show();
+                Close();
+            }
+            
+        }
     } 
 }

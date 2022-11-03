@@ -22,6 +22,7 @@ namespace TeamUp
         public Profile()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.WindowState.Maximized;
         } 
 
         private void B_Home_Click(object sender, RoutedEventArgs e)

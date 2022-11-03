@@ -442,7 +442,7 @@
                 </StackPanel>
             </ListBox>
 
-            <Button Style="{StaticResource BtnAnim}" Margin="20,5,20,5" Foreground="White"  Grid.Row="4" Content="Start Using TeamUp" Click="Button_Click">
+            <Button x:Name="Open_Profile_page" FontSize="24" Style="{StaticResource BtnAnim}" Margin="20,5,20,5" Foreground="White"  Grid.Row="4" Content="Start Using TeamUp" Click="Button_Click">
                
             </Button>
 
@@ -455,15 +455,15 @@
 
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" >
             <Image HorizontalAlignment="Left" Margin="0,0,0,0" Source="/logo 5 small-01.png"></Image>
-            <Label VerticalAlignment="Center" Foreground="#FFB8B8B8">TeamUp</Label>
+            <Label FontSize="24" VerticalAlignment="Center" Foreground="#FFB8B8B8">TeamUp</Label>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1">
             <Label VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="#FFB8B8B8">Don't have an account</Label>
-            <Button Margin="20,0,20,0" Width="120" Content="Get Started" BorderBrush="#FF7C7C7C" Background="White" Foreground="#FFB8B8B8">
+            <Button x:Name="Open_LogIn_page" Margin="20,0,20,0" Width="120" Content="Get Started" BorderBrush="#FF7C7C7C" Background="White" Foreground="#FFB8B8B8" Click="Open_LogIn_page_Click">
                 <Button.Template>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="15"
+                    <Border CornerRadius="10"
                 BorderBrush="Black"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 Height="{TemplateBinding Height}"
