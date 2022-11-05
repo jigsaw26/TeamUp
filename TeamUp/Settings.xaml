@@ -252,6 +252,6 @@
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">Ukranian</Button>
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Russian</Button>
         </Grid>
-        <Button Style="{StaticResource BtnStyle}" Grid.Row="6" Grid.RowSpan="3" Click="Button_Click">Log off</Button>
+        <Button Style="{StaticResource BtnStyle}" Grid.Row="4" Grid.RowSpan="3" Click="Button_Click">Log off</Button>
     </Grid>
 </Window>
