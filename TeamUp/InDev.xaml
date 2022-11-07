@@ -93,7 +93,13 @@
         <!--Первая половина грида-->
         <StackPanel HorizontalAlignment="Left">
             <Image Width="100" Height="100" Margin="57,23,0,0" HorizontalAlignment="Left" Source="logo 5 small-01.png"></Image>
-            <TextBox Width="296" Height="46" Margin="57,23,0,0" FontSize="20"  ></TextBox>
+            <TextBox Width="296" Height="46" Margin="57,23,0,0" FontSize="20"  >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
             <Grid Height="350" Margin="57,43,0,0">
                 <Grid.RowDefinitions>

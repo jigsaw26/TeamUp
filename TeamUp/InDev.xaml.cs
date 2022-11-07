@@ -36,7 +36,7 @@ namespace TeamUp
         {
             Settings settings = new Settings();
             settings.Show();
-            Close();
+
         }
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)

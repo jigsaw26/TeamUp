@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Settings" Height="736" Width="936">
+        Title="Settings" Height="736" Width="936" ResizeMode="NoResize" ShowInTaskbar="False">
     
     
     
@@ -68,7 +68,7 @@
                 <Setter Property="Button.VerticalContentAlignment" Value="Center"></Setter>
                 <Setter Property="Button.Background" Value="White"></Setter>
                 <Setter Property="Button.BorderThickness" Value="0"></Setter>
-                <Setter Property="Button.Width" Value="250"></Setter>
+                <!--<Setter Property="Button.Width" Value="250"></Setter>-->
                 <Setter Property="Button.Height" Value="50" ></Setter>
                 <Setter Property="Button.HorizontalContentAlignment" Value="Left"></Setter>
                 <Setter Property="Button.Template">
@@ -176,16 +176,17 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Label FontSize="25" Foreground="Black" FontWeight="Bold" Margin="50,20,0,0">Settings</Label>
+        <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Settings</Label>
 
 
 
         <TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged" />
-        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}" Grid.Row="2" Click="B_Account_Click"> Your Account</Button>
-        <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
-        <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
-        <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Grid.Row="2" Grid.RowSpan="4" Click="B_Languages_Click">Languages</Button>
+        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="0,0,115,0" Width="170" Grid.Row="2" Click="B_Account_Click"> Your Account</Button>
+        <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
+        <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
+        <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="0,0,120,0" Width="140" Grid.Row="2" Grid.RowSpan="4" Click="B_Languages_Click">Languages</Button>
         <Rectangle Grid.Column="1" Grid.RowSpan="7" Width="2" Fill="#FFADADAD" HorizontalAlignment="Left" ></Rectangle>
+        
         <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden" >
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -196,7 +197,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Label FontSize="25" 
-               Foreground="Black" FontWeight="Bold" Margin="50,20,0,0">Your Account</Label>
+               Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Your Account</Label>
             <TextBox Grid.Row="1" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,0,0,0">Karpov Danil</TextBox>
             <TextBox Grid.Row="1" Grid.RowSpan="2" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,50,0,0">380123456789</TextBox>
             <TextBox Grid.Row="1" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0">mail@gmail.com</TextBox>
@@ -219,20 +220,20 @@
             </Button>
 
         </Grid>
-        <Grid x:Name="btn2" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden">
+        <Grid x:Name="btn2" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden"><!--Security-->
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Label FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
-               Foreground="Black" FontWeight="Bold" Margin="50,20,0,0">Change Password</Label>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,100,0,0"> Enter old password:</Label>
-            <PasswordBox Width="250" Height="50" Margin="0,200,220,0"></PasswordBox>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,300,0,0">Enter new password:</Label>
-            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,50,220,0"></PasswordBox>
-            <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,150,0,0">Again new password:</Label>
-            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,250,220,0"></PasswordBox>
-            <Button Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
+               Foreground="#585858" FontWeight="Bold" Margin="50,-270,0,0">Change Password</Label>
+            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,-100,0,0"> Enter old password:</Label>
+            <PasswordBox Width="250" Height="50" Margin="0,00,220,0"></PasswordBox>
+            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,150,0,0">Enter new password:</Label>
+            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,-120,220,0"></PasswordBox>
+            <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,50,0,0">Again new password:</Label>
+            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,150,220,0"></PasswordBox>
+            <Button  Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
                     HorizontalAlignment="Left" Margin="50,50,0,0">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -241,17 +242,25 @@
                 </Button.Resources>
             </Button>
         </Grid>
-        <Grid x:Name="btn3" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden">
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="50,0,0,250" >Enable notifications</CheckBox>
+        <Grid x:Name="btn3" Grid.Column="1" Grid.RowSpan="4" Visibility="Hidden" > <!--Notifications-->
+            <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Notifications</Label>
+            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="50,0,0,200" >Enable notifications</CheckBox>
+
+            <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,150,0,0">Preferences</Label>
+            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,50,0,0" >Likes</CheckBox>
+            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,150,0,0" >Firends add</CheckBox>
+            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,250,0,0" >Messages</CheckBox>
+            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,350,0,0" >Posts </CheckBox>
+            
         </Grid>
-        <Grid x:Name="btn4" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden">
+        <Grid x:Name="btn4" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden"> <!--languages-->
             <Label FontSize="25" 
-               Foreground="Black" FontWeight="Bold" Margin="50,20,0,0">Languages</Label>
-            <Label Margin="50,60,0,0">Select language that best suits you</Label>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,100,0,0">English</Button>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">Ukranian</Button>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Russian</Button>
+               Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Languages</Label>
+            <Label Margin="50,70,0,0">Select language that best suits you</Label>
+            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">English</Button>
+            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Ukranian</Button>
+            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0">Russian</Button>
         </Grid>
-        <Button Style="{StaticResource BtnStyle}" Grid.Row="4" Grid.RowSpan="3" Click="Button_Click">Log off</Button>
+        <Button Margin="0,0,150,0" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="4" Grid.RowSpan="3" Click="Button_Click">Log off</Button>
     </Grid>
 </Window>

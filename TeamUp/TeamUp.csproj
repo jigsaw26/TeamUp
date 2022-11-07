@@ -39,6 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="XAML images\Place icon.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\devbg.jpg" />
     <Resource Include="Images\Emoji icon.png" />
     <Resource Include="Images\GIF icon.png" />
@@ -69,6 +73,7 @@
     <Resource Include="Images\Notifications icon.png" />
     <Resource Include="Images\settings icon test.png" />
     <Resource Include="logo 5 small-01.png" />
+    <Resource Include="XAML images\Place icon.xaml" />
   </ItemGroup>
 
 </Project>
