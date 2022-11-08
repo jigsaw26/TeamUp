@@ -373,7 +373,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">YOUR NAME</TextBlock>
-                        <TextBox  Width="545">
+                        <TextBox x:Name="Text_Name"  Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -385,7 +385,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">YOUR SURNAME</TextBlock>
-                        <TextBox  Width="545">
+                        <TextBox x:Name="Text_Surname"  Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -397,7 +397,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">DATE OF BIRTH</TextBlock>
-                        <TextBox  Width="545">
+                        <TextBox x:Name="Text_Date"  Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -409,7 +409,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">COUNTRY</TextBlock>
-                        <TextBox Width="545">
+                        <TextBox x:Name="Text_Counrty" Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -421,7 +421,7 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">EMAIL</TextBlock>
-                        <TextBox  Width="545">
+                        <TextBox x:Name="Text_Email"  Width="545">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -433,12 +433,12 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">PASSWORD</TextBlock>
-                        <PasswordBox  Width="546"></PasswordBox>
+                        <PasswordBox x:Name="Text_Password"  Width="546"></PasswordBox>
                     </StackPanel>
                 </ListBoxItem>
                 <StackPanel>
                     <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">REPEAT PASSWORD</TextBlock>
-                    <PasswordBox  Width="545"></PasswordBox>
+                    <PasswordBox x:Name="Text_Password2"  Width="545"></PasswordBox>
                 </StackPanel>
             </ListBox>
 

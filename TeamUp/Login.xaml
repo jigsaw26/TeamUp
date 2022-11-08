@@ -129,7 +129,7 @@
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label FontSize="18">YOUR EMAIL</Label>
-                <TextBox BorderBrush="Black" Grid.Row="1" Width="500" Height="55"></TextBox>
+                <TextBox x:Name="Text_Email" BorderBrush="Black" Grid.Row="1" Width="500" Height="55"></TextBox>
             </Grid>
 
             <Grid Grid.Row="3" Width="500">
@@ -138,10 +138,10 @@
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label FontSize="18">YOUR PASSWORD</Label> 
-                <PasswordBox BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></PasswordBox>
+                <PasswordBox x:Name="Text_Password" BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></PasswordBox>
             </Grid>
 
-            <Button Style="{StaticResource BtnAnim}" Grid.Row="4" FontSize="15" Width="325" 
+            <Button x:Name="Text_Sign" Style="{StaticResource BtnAnim}" Grid.Row="4" FontSize="15" Width="325" 
                     Height="55" Content="Sign In" Click="Button_Click_1">
             </Button>
 
