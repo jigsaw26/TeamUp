@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
 
 namespace TeamUp
 {
@@ -20,13 +23,34 @@ namespace TeamUp
     /// </summary>
     public partial class Register : Window
     {
+        IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
+        IFirebaseClient Client;
+
         public Register()
         {
             InitializeComponent();
             this.WindowState = System.Windows.WindowState.Maximized;
+            Client = new FireSharp.FirebaseClient(Config);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreateUser();
+            
+        }
+
+        private async void CreateUser()
+        {
+            var Info = new UserInfo{
+                userNameV = Text_Name.Text,
+                emailV = Text_Email.Text,
+                passwordV = Text_Counrty 
+            };
+            FirebaseResponse respone = await Client.SetAsync("users/"+Text_Name.Text, Info);
+            MessageBox.Show("Готово");
+        }
+
+       /* private void Button_Click(object sender, RoutedEventArgs e)
         {  
             if (Text_Name.Text == "" || Text_Surname.Text == "" || Text_Counrty.Text == "" || Text_Date.Text == "" || Text_Email.Text == "" || Text_Password.Password == "" || Text_Password2.Password == "")
                 MessageBox.Show("Заполните все поля");
@@ -90,6 +114,8 @@ namespace TeamUp
             } 
         }
 
+
+        */
         private void Open_LogIn_page_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
@@ -98,7 +124,7 @@ namespace TeamUp
         }
 
 
-        public int CheckEmail()
+      /*  public int CheckEmail()
         {
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load("Users.xml");
@@ -115,6 +141,6 @@ namespace TeamUp
                 if (y == 1) break;
             }
             return y;
-        }
+        }*/
     }
 }

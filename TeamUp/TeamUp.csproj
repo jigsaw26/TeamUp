@@ -43,6 +43,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FireSharp" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\devbg.jpg" />
     <Resource Include="Images\Emoji icon.png" />
     <Resource Include="Images\GIF icon.png" />
