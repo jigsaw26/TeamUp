@@ -75,7 +75,12 @@ namespace TeamUp
                 if (Tbox_Search.Text == B_Account.Content.ToString()) B_Account_Click(sender, e);
                 if (Tbox_Search.Text == "Password") B_Account_Click(sender, e); 
                 if (Tbox_Search.Text == B_Notifications.Content.ToString()) B_Notifications_Click(sender, e);
-                if (Tbox_Search.Text == B_Security.Content.ToString()) B_Security_Click(sender, e); 
+                if (Tbox_Search.Text == B_Security.Content.ToString())
+                {
+                    B_Security_Click(sender, e);
+                    B_Security.Background = Brushes.Blue;
+                }
+                    
             }
         }
 

@@ -19,6 +19,8 @@ namespace TeamUp
     /// </summary>
     public partial class Home : Window
     {
+        Boolean WindowOpened = false;
+
         public Home()
         {
             InitializeComponent();
@@ -35,7 +37,11 @@ namespace TeamUp
         private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
-            settings.Show();
+            if (!WindowOpened)
+            {
+                settings.Show();
+                WindowOpened = true;
+            }
         }
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)

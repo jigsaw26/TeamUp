@@ -19,6 +19,8 @@ namespace TeamUp
     /// </summary>
     public partial class Profile : Window
     {
+        Boolean WindowOpened = false; 
+
         public Profile()
         {
             InitializeComponent();
@@ -34,9 +36,12 @@ namespace TeamUp
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
-            Settings settings = new Settings();
-            settings.Show();
-           
+            Settings settings = new Settings(); 
+            if (!WindowOpened)
+            {
+                settings.Show();
+                WindowOpened = true;
+            } 
         }
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)

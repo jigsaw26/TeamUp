@@ -35,20 +35,26 @@ namespace TeamUp
 
         private void Button_Click_1(object sender, RoutedEventArgs e) //profile click
         {
-            if (Text_Email.Text == "" || Text_Password.Password == "")
-                MessageBox.Show("Заполните все поля");
-            else
-            {
-                int Check = CheckEmail();
-                if (Check == 0) MessageBox.Show("Не верно введен логин и пароль");
-                else if (Check == 1) MessageBox.Show("Не верно введен логин или пароль");
-                else 
-                { 
-                    Profile profile = new Profile();
-                    profile.Show();
-                    Close();
-                } 
-            } 
+
+            Profile profile = new Profile();
+            profile.Show();
+            Close();
+
+
+            //if (Text_Email.Text == "" || Text_Password.Password == "")
+            //    MessageBox.Show("Заполните все поля");
+            //else
+            //{
+            //    int Check = CheckEmail();
+            //    if (Check == 0) MessageBox.Show("Не верно введен логин и пароль");
+            //    else if (Check == 1) MessageBox.Show("Не верно введен логин или пароль");
+            //    else 
+            //    { 
+            //        Profile profile = new Profile();
+            //        profile.Show();
+            //        Close();
+            //    } 
+            //} 
         }
 
         public int CheckEmail()

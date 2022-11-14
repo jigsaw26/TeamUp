@@ -9,6 +9,33 @@
         Title="InDev" Height="1024" Width="1440">
 
     <Window.Resources>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                        <Border Name="Border"
+                CornerRadius="15"
+                BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="White" />
+                            </Border.Background>
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#FFB8B8B8" />
+                            </Border.BorderBrush>
+
+                            <ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+        </Style>
+
         <Style x:Key="BtnStyle">
             <Style.Setters>
                 <Setter Property="Button.FontSize" Value="25"></Setter>
@@ -93,13 +120,7 @@
         <!--Первая половина грида-->
         <StackPanel HorizontalAlignment="Left">
             <Image Width="100" Height="100" Margin="57,23,0,0" HorizontalAlignment="Left" Source="logo 5 small-01.png"></Image>
-            <TextBox Width="296" Height="46" Margin="57,23,0,0" FontSize="20"  >
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="15"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+            <TextBox Width="296" Height="46" Margin="57,23,0,0" FontSize="20" > </TextBox>
 
             <Grid Height="350" Margin="57,43,0,0">
                 <Grid.RowDefinitions>
