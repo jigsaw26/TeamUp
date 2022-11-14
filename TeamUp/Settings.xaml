@@ -180,7 +180,7 @@
 
 
 
-        <TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged" />
+        <!--<TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged" />-->
         <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Your Account</Button>
         <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
         <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>

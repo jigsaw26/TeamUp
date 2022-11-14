@@ -80,16 +80,30 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+
+        <Style TargetType="Border"> 
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"> </DropShadowEffect> 
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="CornerRadius" Value="35"></Setter> 
+        </Style> 
+ 
     </Window.Resources>
     
     
     <Grid>
+        <Border CornerRadius="0" Background="White" Grid.RowSpan="3"></Border>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="360"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="360"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions> 
 
             <!--Первая половина грида-->
             <StackPanel HorizontalAlignment="Left">
@@ -97,13 +111,9 @@
                 <TextBox Width="296" Height="46" Margin="57,23,0,0" Visibility="Hidden"></TextBox>
 
                 <!--ссылка на пользователя-->
-                <Grid Height="206" Width="296" Margin="27,0,0,0">
+                <Grid Height="206" Width="296" Margin="27,0,0,0" >
 
-                    <Border Background="White" CornerRadius="35" Grid.RowSpan="3">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"/>
-                        </Border.Effect>
-                    </Border>
+                    <Border></Border>
 
                     <StackPanel>
                         <Image Source="Images/batsiev-round-photo-1.png" Height="79" Width="77" VerticalAlignment="Top" Margin="0,15,0,0" MouseDown="Image_MouseDown"></Image>
@@ -173,7 +183,10 @@
             <!--центральная секция с постами-->
             
             <!--создать пост-->
-            <Grid Grid.Column="1" >
+
+            <ScrollViewer Name="scroll" CanContentScroll="True" Grid.Column="1" >
+
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="145"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -201,8 +214,8 @@
 
                         <Grid>
                             <Image Source="Images/batsiev-round-photo-1.png" Height="62" Width="64" HorizontalAlignment="Left" Margin="20,10,0,0"></Image>
-                            <TextBlock Text="What's new?" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,20,0,0" FontSize="18" Foreground="#B8B8B8"></TextBlock>
-                            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,30,20,0" FontSize="20" Width="105" Height="39" Content="Post" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                            <TextBox x:Name="Tbox_Post"  Grid.Row="1" Height="26" Width="417" VerticalAlignment="Center"  HorizontalAlignment="Left" Margin="100,20,0,0" MouseEnter="Tbox_Post_MouseEnter" FontSize="18" Foreground="#B8B8B8" BorderBrush="{x:Null}"/> 
+                            <Button x:Name="B_Post" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,30,20,0" FontSize="20" Width="105" Height="39" Content="Post" BorderBrush="#FAB810" Background="#FAB810" Foreground="White" Click="B_Post_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="20"/>
@@ -236,31 +249,63 @@
                     
             
             <!--макет поста-->
-            <Grid Grid.Column="1" Grid.Row="1">
+            <Grid x:Name="GridMainPosts" Grid.Column="1" Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="250"></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="250"></RowDefinition> 
                 </Grid.RowDefinitions>
+                    
 
-
-                <Grid Margin="0,30,0,0">
+                 <Grid Margin="0,30,0,0" x:Name="Post1">
+                     
                     <Grid.RowDefinitions>
                        <RowDefinition Height="2*"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
+                       <RowDefinition></RowDefinition>
+                     </Grid.RowDefinitions>
+                        <Border Grid.RowSpan="2"></Border>
 
-                    <Border CornerRadius="35" Background="White" Grid.RowSpan="3">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"/>
-                        </Border.Effect>
-                    </Border>
+                        <Image Source="Images/batsiev-round-photo-1.png" Height="79" Width="77" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,0,0"></Image>
+                        <TextBlock Margin="110,25,0,0" Text="Andrew Rudenko" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#6B6B6B" FontSize="18"></TextBlock>
+                        <TextBlock Margin="110,45,0,0" Text="@andrew_rudenko" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#959595" FontSize="12"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="110,65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF3E3E3E" FontSize="16" Text="@skdfnskdnfoskdnf sodk fnsodj kfsd fkh sdjf sidj fbsihdjb fsidb fsih dbfisd bfisb disb fsi dbfsid bisd bisb fsi dbfis bdfi bsidb fsid hbfisd bisb dfihsdb ifshb disdjh bfksjdb isdb fisdb fisbd fnfsodjf nsod fnsdojf n"></TextBlock>
 
-                </Grid>
-            
+                        <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition> 
+                                    <ColumnDefinition></ColumnDefinition> 
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition> 
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <TextBlock Height="30" Margin="20,5,0,0" Text="30" FontSize="25"></TextBlock>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <TextBlock Height="30" Margin="20,5,0,0" Text="30" FontSize="25"></TextBlock>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <TextBlock Height="30" Margin="20,0,0,0" Text="30" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="4" Orientation="Horizontal">
+                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></Image> 
+                                </StackPanel> 
+
+
+
+                        </Grid>
+ 
+                 </Grid> 
+                
             </Grid>
             
             </Grid>
-
+            </ScrollViewer>
 
             <!--правая секция с новостями-->
             <Grid Grid.Column="2">

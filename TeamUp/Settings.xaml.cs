@@ -20,7 +20,7 @@ namespace TeamUp
         {
             InitializeComponent();
 
-            Tbox_Search.Text = "Search Settings";//подсказка
+            //Tbox_Search.Text = "Search Settings";//подсказка
         }
 
         private void B_Account_Click(object sender, RoutedEventArgs e)
@@ -60,29 +60,29 @@ namespace TeamUp
             this.IsEnabled = true;
         }
 
-        private void Tbox_Search_MouseEnter(object sender, MouseEventArgs e)
-        { 
-            if (x == 0) Tbox_Search.Text = null; 
-            x++; 
-        }
+        //private void Tbox_Search_MouseEnter(object sender, MouseEventArgs e)
+        //{ 
+        //    if (x == 0) Tbox_Search.Text = null; 
+        //    x++; 
+        //}
          
 
-        private void Tbox_Search_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (Tbox_Search.Text.Length >= 3)
-            {
-                if (Tbox_Search.Text == B_Languages.Content.ToString()) B_Languages_Click(sender, e);
-                if (Tbox_Search.Text == B_Account.Content.ToString()) B_Account_Click(sender, e);
-                if (Tbox_Search.Text == "Password") B_Account_Click(sender, e); 
-                if (Tbox_Search.Text == B_Notifications.Content.ToString()) B_Notifications_Click(sender, e);
-                if (Tbox_Search.Text == B_Security.Content.ToString())
-                {
-                    B_Security_Click(sender, e);
-                    B_Security.Background = Brushes.Blue;
-                }
+        //private void Tbox_Search_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    if (Tbox_Search.Text.Length >= 3)
+        //    {
+        //        if (Tbox_Search.Text == B_Languages.Content.ToString()) B_Languages_Click(sender, e);
+        //        if (Tbox_Search.Text == B_Account.Content.ToString()) B_Account_Click(sender, e);
+        //        if (Tbox_Search.Text == "Password") B_Account_Click(sender, e); 
+        //        if (Tbox_Search.Text == B_Notifications.Content.ToString()) B_Notifications_Click(sender, e);
+        //        if (Tbox_Search.Text == B_Security.Content.ToString())
+        //        {
+        //            B_Security_Click(sender, e);
+        //            B_Security.Background = Brushes.Blue;
+        //        }
                     
-            }
-        }
+        //    }
+        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
