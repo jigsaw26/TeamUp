@@ -100,34 +100,11 @@
             </Style.Setters>
 
         </Style>
-
         <Style TargetType="TextBox">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
-                        <Border Name="Border"
-                CornerRadius="15"
-                BorderThickness="2">
-                            <Border.Background>
-                                <SolidColorBrush Color="White" />
-                            </Border.Background>
-                            <Border.BorderBrush>
-                                <SolidColorBrush Color="#FFB8B8B8" />
-                            </Border.BorderBrush>
-
-                            <ScrollViewer Margin="0"
-                        x:Name="PART_ContentHost" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-
-            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
         </Style>
-
-
         <Style TargetType="PasswordBox">
             <Setter Property="Template">
                 <Setter.Value>
@@ -154,8 +131,6 @@
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
         </Style>
-
-
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="18"></Setter>
             <Setter Property="Foreground" Value="#FFB8B8B8"></Setter>
@@ -180,14 +155,20 @@
 
 
 
-        <!--<TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged" />-->
+        <TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged">
+        <TextBox.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </TextBox.Resources>
+        </TextBox>
         <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Your Account</Button>
         <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
         <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
         <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,172,85" Width="140" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
         <Rectangle Grid.Column="1" Grid.RowSpan="7" Width="2" Fill="#FFADADAD" HorizontalAlignment="Left" ></Rectangle>
 
-        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden" >
+        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden" Background="White" >
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -196,13 +177,138 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+            
             <Label FontSize="25" 
                Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Your Account</Label>
-            <TextBox Grid.Row="1" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,0,0,0">Karpov Danil</TextBox>
-            <TextBox Grid.Row="1" Grid.RowSpan="2" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,50,0,0">380123456789</TextBox>
-            <TextBox Grid.Row="1" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0">mail@gmail.com</TextBox>
-            <TextBox Grid.Row="1" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0">Deribasovskaya 2</TextBox>
-            <TextBox Grid.Row="1" Grid.RowSpan="5" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,200,0,0">September 26</TextBox>
+            <TextBlock x:Name="my_TextBlock" Grid.Row="1" Foreground="LightGray" Height="60" Width="300" FontSize="25" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Name">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBox Grid.Row="1"  Name="my_TextBox" Background="{x:Null}" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,0,0,0"></TextBox>
+
+            <TextBlock x:Name="my_TextBlock2" Grid.Row="1" FontSize="25" Foreground="LightGray"  Grid.RowSpan="2" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,50,0,0" Text="Surname">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox2}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox2}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBox Grid.Row="1" Name="my_TextBox2" Background="{x:Null}" Grid.RowSpan="2" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,50,0,0"></TextBox>
+
+            <TextBlock x:Name="my_TextBlock3" Grid.Row="1" FontSize="25" Foreground="LightGray" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0" Text="Email">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox3}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox3}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBox Grid.Row="1" Name="my_TextBox3" Background="{x:Null}" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0"></TextBox>
+
+            <TextBlock x:Name="my_TextBlock4" Grid.Row="1" FontSize="25" Foreground="LightGray" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0" Text="Country">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox4}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox4}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBox Grid.Row="1" Name="my_TextBox4" Background="{x:Null}" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0"></TextBox>
+
+            <TextBlock x:Name="my_TextBlock5" Grid.Row="1" FontSize="25" Foreground="LightGray"  Grid.RowSpan="5" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,200,0,0" Text="Password">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox5}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Text, ElementName=my_TextBox5}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBox Grid.Row="1" Name="my_TextBox5" Background="{x:Null}" Grid.RowSpan="5" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,200,0,0"></TextBox>
             <!--<Button Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White">
                 <Button.Resources>
                     <Style TargetType="Border">
