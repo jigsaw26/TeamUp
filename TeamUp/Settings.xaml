@@ -100,11 +100,40 @@
             </Style.Setters>
 
         </Style>
+        
+          
         <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border Name="Border"
+                CornerRadius="15"
+                BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="White" />
+                            </Border.Background>
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#FFB8B8B8" />
+                            </Border.BorderBrush>
+
+                            <ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+            <Setter Property="FontSize" Value="20"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
         </Style>
+
+
+
+
+
+
         <Style TargetType="PasswordBox">
             <Setter Property="Template">
                 <Setter.Value>
@@ -155,13 +184,13 @@
 
 
 
-        <TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged">
+        <!--<TextBox x:Name="Tbox_Search"  Grid.Row="1" Height="46" Width="217" HorizontalAlignment="Left" Margin="50,0,0,0" MouseEnter="Tbox_Search_MouseEnter" TextChanged="Tbox_Search_TextChanged">
         <TextBox.Resources>
             <Style TargetType="{x:Type Border}">
                 <Setter Property="CornerRadius" Value="15"/>
             </Style>
         </TextBox.Resources>
-        </TextBox>
+        </TextBox>-->
         <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Your Account</Button>
         <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
         <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
@@ -334,14 +363,16 @@
             </Grid.RowDefinitions>
             <Label FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
                Foreground="#585858" FontWeight="Bold" Margin="50,-270,0,0">Change Password</Label>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,-100,0,0">Enter old password:</Label>
-            <PasswordBox Width="250" Height="50" Margin="0,00,220,0"></PasswordBox>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,150,0,0">Enter new password:</Label>
-            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,-120,220,0"></PasswordBox>
-            <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,50,0,0">Again new password:</Label>
-            <PasswordBox Grid.RowSpan="2" Width="250" Height="50" Margin="0,150,220,0"></PasswordBox>
-            <Button  Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
-                    HorizontalAlignment="Left" Margin="50,50,0,0">
+            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,-170,0,0">Email:</Label>
+            <TextBox x:Name="Email" Width="250" Height="50" Margin="0,-50,220,0"></TextBox>
+            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,50,0,0">Enter old password:</Label>
+            <PasswordBox x:Name="Pass_Old" Width="250" Height="50" Margin="0,150,220,0"></PasswordBox>
+            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,300,0,0">Enter new password:</Label>
+            <PasswordBox x:Name="Pass_New1" Grid.RowSpan="2" Width="250" Height="50" Margin="0,30,220,0"></PasswordBox>
+            <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,200,0,0">Again new password:</Label>
+            <PasswordBox x:Name="Pass_New2" Grid.RowSpan="2" Width="250" Height="50" Margin="0,300,220,0"></PasswordBox>
+            <Button x:Name="B_pass"  Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
+                    HorizontalAlignment="Left" Margin="50,100,0,0" Click="B_pass_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>

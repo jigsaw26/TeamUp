@@ -115,7 +115,11 @@ namespace TeamUp
                     KatalElem.AppendChild(AtrElem);
                     Text = xDoc.CreateTextNode(Text_Password.Password);
                     AtrElem.AppendChild(Text);
-                     
+
+                    XmlAttribute PasAttr = xDoc.CreateAttribute("pas");
+                    PasAttr.Value = Text_Password.Password;
+                    AtrElem.Attributes.Append(PasAttr);
+
                     xDoc.Save("Users.xml");
 
                     Profile profile = new Profile();
@@ -139,24 +143,14 @@ namespace TeamUp
         public int CheckPassword(string value)
         {
             int x = 0;
-            if (value.Length >= 8)
-            {
-                x++;
-            }
+            if (value.Length >= 8) x++; 
             var Symbols = new[] { '(', '_', '!', '"', '№', ';', '%', ':', '?', '*', ')', '"' };
-            if (value.Any(ch => Symbols.Contains(ch)))
-            {
-                x++;
-            }
+            if (value.Any(ch => Symbols.Contains(ch))) x++; 
 
             int temp = 0;
-            for (int i = 0; i < value.Length; i++)
-            {
-                if (value[i] >= '0' && value[i] <= '9')
-                {
-                    temp++;
-                }
-            }
+            for (int i = 0; i < value.Length; i++) 
+                if (value[i] >= '0' && value[i] <= '9') 
+                    temp++;  
 
            
             if (temp >= 1) x++;
