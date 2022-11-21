@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid> 
+    <Grid>
+        <TextBox x:Name="TXT" Height="50"
+                 Width="200"></TextBox>
+        <Button x:Name="btn" Height="50"
+                Width="200" Margin="0,150,0,0" Click="btn_Click"></Button>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
@@ -23,44 +24,46 @@ namespace TeamUp
     /// </summary>
     public partial class Register : Window
     {
-     /*   IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
-        IFirebaseClient Client;*/
+         IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
+         IFirebaseClient Client;
 
         public Register()
         {
             InitializeComponent();
             this.WindowState = System.Windows.WindowState.Maximized;
-            //Client = new FireSharp.FirebaseClient(Config);
+            Client = new FireSharp.FirebaseClient(Config);
         }
 
-        /*private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            CreateUser();
+       private async void Button_Click(object sender, RoutedEventArgs e)
+       {
+           var Info = new UserInfo
+           {
+               userNameV = Text_Name.Text,
+               emailV = Text_Email.Text,
+               passwordV = Text_Counrty.Text
+           };
+           try
+           {
+               await Client.SetAsync("users/" + Text_Name.Text, Info);
             
-        }
+               MessageBox.Show("Готово");
+           }
+           catch { }
 
-        private async void CreateUser()
+       }
+
+
+       /* private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var Info = new UserInfo{
-                userNameV = Text_Name.Text,
-                emailV = Text_Email.Text,
-                passwordV = Text_Counrty 
-            };
-            FirebaseResponse respone = await Client.SetAsync("users/"+Text_Name.Text, Info);
-            MessageBox.Show("Готово");  
-        }*/
-      
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {  
             if (Text_Name.Text == "" || Text_Surname.Text == "" || Text_Counrty.Text == "" || Text_Date.Text == "" || Text_Email.Text == "" || Text_Password.Password == "" || Text_Password2.Password == "")
                 MessageBox.Show("Заполните все поля");
             else if (Text_Password.Password != Text_Password2.Password)
-                MessageBox.Show("Пароль не совпадает"); 
+                MessageBox.Show("Пароль не совпадает");
             else
             {
                 int Email_Check1 = CheckEmail();
                 if (Email_Check1 == 1) MessageBox.Show("Такой пользователь уже существует");
-                  
+
                 if (IsEmail(Text_Email.Text) == 0)
                 {
                     MessageBox.Show("Вы ввели не правильный адресс электронной почты");
@@ -72,10 +75,10 @@ namespace TeamUp
                 }
 
                 else
-                { 
-                    string[] AtribteName = new string[6] { "User", "Name", "Surname", "Country", "Date", "Password" }; 
+                {
+                    string[] AtribteName = new string[6] { "User", "Name", "Surname", "Country", "Date", "Password" };
                     XmlDocument xDoc = new XmlDocument();
-                    xDoc.Load("Users.xml"); 
+                    xDoc.Load("Users.xml");
                     XmlElement xRoot = xDoc.DocumentElement;
 
                     XmlElement KatalElem = xDoc.CreateElement(AtribteName[0]);
@@ -126,9 +129,9 @@ namespace TeamUp
                     profile.Show();
                     Close();
                 }
-            } 
+            }
         }
-
+       */
 
 
         private void Open_LogIn_page_Click(object sender, RoutedEventArgs e)
@@ -139,22 +142,22 @@ namespace TeamUp
         }
 
 
-
+/*
         public int CheckPassword(string value)
         {
             int x = 0;
-            if (value.Length >= 8) x++; 
+            if (value.Length >= 8) x++;
             var Symbols = new[] { '(', '_', '!', '"', '№', ';', '%', ':', '?', '*', ')', '"' };
-            if (value.Any(ch => Symbols.Contains(ch))) x++; 
+            if (value.Any(ch => Symbols.Contains(ch))) x++;
 
             int temp = 0;
-            for (int i = 0; i < value.Length; i++) 
-                if (value[i] >= '0' && value[i] <= '9') 
-                    temp++;  
+            for (int i = 0; i < value.Length; i++)
+                if (value[i] >= '0' && value[i] <= '9')
+                    temp++;
 
-           
+
             if (temp >= 1) x++;
- 
+
             return x;
 
         }
@@ -175,22 +178,22 @@ namespace TeamUp
         }
 
         public int CheckEmail()
-          {
-              XmlDocument xDoc = new XmlDocument();
-              xDoc.Load("Users.xml");
-              XmlElement xRoot = xDoc.DocumentElement;
+        {
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.Load("Users.xml");
+            XmlElement xRoot = xDoc.DocumentElement;
 
-              int y = 0;
-              foreach (XmlNode xnode in xRoot)
-              {
-                  if (xnode.Attributes.Count > 0)
-                  {
-                      XmlNode attr = xnode.Attributes.GetNamedItem("email");
-                      if (attr != null) if (attr.Value == Text_Email.Text) y++;
-                  }
-                  if (y == 1) break;
-              }
-              return y;
-          }
+            int y = 0;
+            foreach (XmlNode xnode in xRoot)
+            {
+                if (xnode.Attributes.Count > 0)
+                {
+                    XmlNode attr = xnode.Attributes.GetNamedItem("email");
+                    if (attr != null) if (attr.Value == Text_Email.Text) y++;
+                }
+                if (y == 1) break;
+            }
+            return y;
+        }*/
     }
 }

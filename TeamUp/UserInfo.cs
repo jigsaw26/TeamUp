@@ -6,6 +6,6 @@ namespace TeamUp
     {
         public string userNameV { get; set; }
         public string emailV { get; set; }
-        public TextBox passwordV { get; set; }
+        public string passwordV { get; set; }
     }
 }
