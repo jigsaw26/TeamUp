@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,14 +32,30 @@ namespace TeamUp
         public Register()
         {
             InitializeComponent();
+            Combo_Load();
             this.WindowState = System.Windows.WindowState.Maximized;
             Client = new FireSharp.FirebaseClient(Config);
+        }
+
+        public void Combo_Load()
+
+        {
+            CultureInfo[] cinfo = CultureInfo.GetCultures(CultureTypes.AllCultures & ~CultureTypes.NeutralCultures);
+            foreach (CultureInfo cul in cinfo)
+
+            {
+                int pos = cul.EnglishName.LastIndexOf('(');
+                string temp = cul.EnglishName.Substring(pos + 1);
+                string country = temp.Substring(0, temp.IndexOf(')'));
+                Text_Country.Items.Add(country);
+            }
+
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         { 
           
-            if (Text_Name.Text == "" || Text_Surname.Text == "" || Text_Counrty.Text == "" || Text_Date.Text == "" || Text_Email.Text == "" || Text_Password.Password == "" || Text_Password2.Password == "")
+            if (Text_Name.Text == "" || Text_Surname.Text == "" || Text_Country.Text == "" || Text_Date.Text == "" || Text_Email.Text == "" || Text_Password.Password == "" || Text_Password2.Password == "")
                 MessageBox.Show("Заполните все поля");
             else if (Text_Password.Password != Text_Password2.Password)
                 MessageBox.Show("Пароль не совпадает");
@@ -63,13 +80,15 @@ namespace TeamUp
 
         public async void Reg()
         {
+            string g = Text_Country.Text;
+            MessageBox.Show(g);
             Random rnd = new Random();
             var Info = new UserInfo
             {
                 userName = Text_Name.Text,
                 userSurname = Text_Surname.Text,
                 userDateOfBirth = Text_Date.Text,
-                userCountry = Text_Counrty.Text,
+                userCountry = g,
                 userEmail = Text_Email.Text,
                 userPassword = Text_Password.Password.ToString()
             };
@@ -126,40 +145,39 @@ namespace TeamUp
             }
 
 
+         public int CheckPassword(string value)
+         {
+             int x = 0;
+             if (value.Length >= 8) x++;
+             var Symbols = new[] { '(', '_', '!', '"', '№', ';', '%', ':', '?', '*', ')', '"' };
+             if (value.Any(ch => Symbols.Contains(ch))) x++;
 
-            public int CheckPassword(string value)
-            {
-                int x = 0;
-                if (value.Length >= 8) x++;
-                var Symbols = new[] { '(', '_', '!', '"', '№', ';', '%', ':', '?', '*', ')', '"' };
-                if (value.Any(ch => Symbols.Contains(ch))) x++;
-
-                int temp = 0;
-                for (int i = 0; i < value.Length; i++)
-                    if (value[i] >= '0' && value[i] <= '9')
-                        temp++;
+             int temp = 0;
+             for (int i = 0; i < value.Length; i++)
+                 if (value[i] >= '0' && value[i] <= '9')
+                     temp++;
 
 
-                if (temp >= 1) x++;
+             if (temp >= 1) x++;
 
-                return x;
+             return x;
 
-            }
+         }
 
-            public int IsEmail(string value)
-            {
-                int x = 0;
-                try
-                {
-                    var addr = new System.Net.Mail.MailAddress(value);
-                    x++;
-                    return x;
-                }
-                catch
-                {
-                    return x;
-                }
-            }
+         public int IsEmail(string value)
+         {
+             int x = 0;
+             try
+             {
+                 var addr = new System.Net.Mail.MailAddress(value);
+                 x++;
+                 return x;
+             }
+             catch
+             {
+                 return x;
+             }
+         }
         
     }
 }

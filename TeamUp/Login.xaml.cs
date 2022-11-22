@@ -55,6 +55,7 @@ namespace TeamUp
             {
                 FirebaseResponse res = await Client.GetAsync(@"users/" + email); // Открываю нужную ветку в БД
                 Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь  
+                MessageBox.Show(data.ElementAt(2).Value + " == " + data.ElementAt(4).Value);
                 Autorization(data);
                 break;
             }
@@ -68,7 +69,10 @@ namespace TeamUp
                 profile.Show();
                 Close();
             }
-            else { MessageBox.Show("Не верный логин или пароль"); }
+            
+            else {
+              
+                MessageBox.Show("Не верный логин или пароль"); }
         }
 
     }

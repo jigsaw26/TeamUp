@@ -409,13 +409,13 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">COUNTRY</TextBlock>
-                        <TextBox x:Name="Text_Counrty" Width="545">
-                            <TextBox.Resources>
+                        <ComboBox x:Name="Text_Country" Width="545" Height="40" FontSize="24">
+                            <ComboBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
-                            </TextBox.Resources>
-                        </TextBox>
+                            </ComboBox.Resources>
+                        </ComboBox>
                     </StackPanel>
                 </ListBoxItem>
                 <ListBoxItem>
