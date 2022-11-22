@@ -35,7 +35,7 @@ namespace TeamUp
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             Register reg = new Register();
             reg.Show();
             Close();
@@ -44,36 +44,42 @@ namespace TeamUp
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (Text_Email.Text == "" || Text_Password.Password == "")
-                    MessageBox.Show("Заполните все поля");
-            else { LiveCall(); }
+                MessageBox.Show("Заполните все поля");
+            else LiveCall();
         }
 
-        async void LiveCall()
+        void LiveCall()
         {
+            int x = 0;
+
             string email = Text_Email.Text.Substring(0, Text_Email.Text.IndexOf('@'));
             while (true)
             {
-                FirebaseResponse res = await Client.GetAsync(@"users/" + email); // Открываю нужную ветку в БД
-                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь  
-                MessageBox.Show(data.ElementAt(2).Value + " == " + data.ElementAt(4).Value);
-                Autorization(data);
-                break;
+                FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
+                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь
+                С_Email.SetEmail(data.ElementAt(2).Value);
+                x = Autorization(data);
+                if (x == 1)
+                {
+                    Profile profile = new Profile();
+                    profile.Show();
+                    Close();
+                    break;
+                } 
             }
         }
 
-        void Autorization(Dictionary<string,string> record)
+        int Autorization(Dictionary<string, string> record)
         {
-            if (Text_Email.Text ==  record.ElementAt(2).Value && Text_Password.Password.ToString() == record.ElementAt(4).Value) // Сравниваю емеил и пароль с БД
+            if (Text_Email.Text == record.ElementAt(2).Value && Text_Password.Password.ToString() == record.ElementAt(4).Value) // Сравниваю емеил и пароль с БД
             {
-                Profile profile = new Profile();
-                profile.Show();
-                Close();
+                return 1;
             }
-            
-            else {
-              
-                MessageBox.Show("Не верный логин или пароль"); }
+            else
+            {
+                MessageBox.Show("Не верный логин или пароль");
+                return 0;
+            }
         }
-
     }
 }

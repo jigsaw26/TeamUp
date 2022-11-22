@@ -345,8 +345,8 @@
                     </Style>
                 </Button.Resources>
             </Button>-->
-            <Button Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
-                    HorizontalAlignment="Left" Margin="50,0,0,0">
+            <Button x:Name="B_Save" Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
+                    HorizontalAlignment="Left" Margin="50,0,0,0" Click="B_Save_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -402,5 +402,6 @@
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0">Russian</Button>
         </Grid>
         <Button Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
+        <Button x:Name="Exit_Settings" Margin="0,00,200,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Exit Settings</Button>
     </Grid>
 </Window>

@@ -19,8 +19,7 @@ namespace TeamUp
     /// Interaction logic for Home.xaml
     /// </summary>
     public partial class Home : Window
-    {
-        Boolean WindowOpened = false;
+    {  
         //Это флаг по сокрытию текста подсказки в поле поиска
         int x = 0;
 
@@ -50,13 +49,13 @@ namespace TeamUp
         }
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)
-        {
-            Settings settings = new Settings();
-            if (!WindowOpened)
+        { 
+            if (С_Settigs.GetWindow() == 0)
             {
+                С_Settigs.SetWindow(1);
+                Settings settings = new Settings();
                 settings.Show();
-                WindowOpened = true;
-            }
+            }  
         }
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)

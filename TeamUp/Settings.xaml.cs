@@ -6,6 +6,12 @@ using System.Windows.Input;
 using System.Runtime.InteropServices;
 using System.Windows.Media;
 using System.Xml;
+using FireSharp.Response;
+using Newtonsoft.Json;
+using System.Collections.Generic; 
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using System.Linq;
 
 namespace TeamUp
 {
@@ -14,13 +20,16 @@ namespace TeamUp
     /// </summary>
     public partial class Settings : Window
     {
+        IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
+        IFirebaseClient Client;
+
         //Это флаг по сокрытию текста подсказки в поле поиска
         int x = 0;
 
         public Settings()
         {
             InitializeComponent();
-
+            Client = new FireSharp.FirebaseClient(Config);
             //Tbox_Search.Text = "Search Settings";
         }
 
@@ -31,8 +40,33 @@ namespace TeamUp
             btn3.Visibility = Visibility.Hidden;
             btn4.Visibility = Visibility.Hidden;
             this.IsEnabled = true;
-            
+
+            string em = С_Email.GetEmail(); 
+            string email = em.Substring(0, em.IndexOf('@')); 
+            FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
+            Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь 
+            my_TextBox.Text = data.ElementAt(3).Value;
+            my_TextBox2.Text = data.ElementAt(5).Value;
+            my_TextBox3.Text = data.ElementAt(0).Value;
+            my_TextBox4.Text = data.ElementAt(1).Value;
+            my_TextBox5.Text = data.ElementAt(2).Value; 
         }
+
+        private void B_Save_Click(object sender, RoutedEventArgs e)
+        {
+            string em = С_Email.GetEmail();
+            string email = em.Substring(0, em.IndexOf('@'));
+            FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
+            Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь 
+            my_TextBox.Text = data.ElementAt(3).Value;
+            my_TextBox2.Text = data.ElementAt(5).Value;
+            my_TextBox3.Text = data.ElementAt(0).Value;
+            my_TextBox4.Text = data.ElementAt(1).Value;
+            my_TextBox5.Text = data.ElementAt(2).Value; 
+        }
+
+
+
 
         private void B_Security_Click(object sender, RoutedEventArgs e)
         {
@@ -168,6 +202,12 @@ namespace TeamUp
             xDoc.Save("Users.xml");
 
             return y; 
+        }
+
+        private void Exit_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            С_Settigs.SetWindow(0);
+            Close();
         } 
     } 
 }

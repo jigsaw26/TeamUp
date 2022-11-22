@@ -36,12 +36,12 @@ namespace TeamUp
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)
         {
-            Settings settings = new Settings(); 
-            if (!WindowOpened)
+            if (С_Settigs.GetWindow() == 0)
             {
+                С_Settigs.SetWindow(1);
+                Settings settings = new Settings();
                 settings.Show();
-                WindowOpened = true;
-            } 
+            }
         }
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)
