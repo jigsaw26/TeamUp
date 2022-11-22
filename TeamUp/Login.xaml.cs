@@ -41,11 +41,32 @@ namespace TeamUp
             Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (Text_Email.Text == "" || Text_Password.Password == "")
                     MessageBox.Show("Заполните все поля");
-            else { LiveCall(); }
+
+            // Проверка почты. Нужна для того что бы узнать зарегистрирована ли почта
+            FirebaseResponse chkMail = await Client.GetAsync(@"allEmail/");
+            Dictionary<string, string> dataMail = JsonConvert.DeserializeObject<Dictionary<string, string>>(chkMail.Body.ToString());
+ 
+            
+            int check = 0;
+            for (int i = 0; i < dataMail.Count; i++)
+            {
+                if (Text_Email.Text == dataMail.ElementAt(i).Value)
+                {
+                    check++;
+                }
+            }
+            if (check >= 1)
+            {
+                LiveCall(); // Если всё ок, пускаем дальше
+            }
+            else
+            {
+                MessageBox.Show("Не верный логин или пароль");
+            }
         }
 
         async void LiveCall()
@@ -55,7 +76,6 @@ namespace TeamUp
             {
                 FirebaseResponse res = await Client.GetAsync(@"users/" + email); // Открываю нужную ветку в БД
                 Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь  
-                MessageBox.Show(data.ElementAt(2).Value + " == " + data.ElementAt(4).Value);
                 Autorization(data);
                 break;
             }
