@@ -12,6 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using Newtonsoft.Json;
 
 namespace TeamUp
 {
@@ -20,71 +25,51 @@ namespace TeamUp
     /// </summary>
     public partial class Login : Window
     {
+        IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
+        IFirebaseClient Client;
         public Login()
         {
             InitializeComponent();
             this.WindowState = System.Windows.WindowState.Maximized;
+            Client = new FireSharp.FirebaseClient(Config);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) //registration click
+        private void Button_Click(object sender, RoutedEventArgs e)
         { 
             Register reg = new Register();
             reg.Show();
             Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) //profile click
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
-            Profile profile = new Profile();
-            profile.Show();
-            Close();
-
-
-            //if (Text_Email.Text == "" || Text_Password.Password == "")
-            //    MessageBox.Show("Заполните все поля");
-            //else
-            //{
-            //    int Check = CheckEmail();
-            //    if (Check == 0) MessageBox.Show("Не верно введен логин и пароль");
-            //    else if (Check == 1) MessageBox.Show("Не верно введен логин или пароль");
-            //    else 
-            //    { 
-            //        Profile profile = new Profile();
-            //        profile.Show();
-            //        Close();
-            //    } 
-            //} 
+            if (Text_Email.Text == "" || Text_Password.Password == "")
+                    MessageBox.Show("Заполните все поля");
+            else { LiveCall(); }
         }
 
-        public int CheckEmail()
+        async void LiveCall()
         {
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load("Users.xml");
-            XmlElement xRoot = xDoc.DocumentElement;
-             
-            int y = 0;
-            foreach (XmlNode xnode in xRoot)
+            string email = Text_Email.Text.Substring(0, Text_Email.Text.IndexOf('@'));
+            while (true)
             {
-                if (xnode.Attributes.Count > 0)
-                {
-                    XmlNode attr = xnode.Attributes.GetNamedItem("email");
-                    if (attr != null) if (attr.Value == Text_Email.Text) y++;
-                    foreach (XmlNode childnode in xnode.ChildNodes)
-                    {
-                        if (y == 1)
-                        {
-                            if (xnode.Attributes.Count > 0)
-                            {
-                                XmlNode attr1 = childnode.Attributes.GetNamedItem("pas");
-                                if (attr != null) if (attr.Value == Text_Password.Password) y++;
-                            } 
-                        }
-                        if (y == 2) break;
-                    }
-                }  
+                FirebaseResponse res = await Client.GetAsync(@"users/" + email);
+                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString());
+                Autorization(data);
+                break;
             }
-            return y;
         }
+
+        void Autorization(Dictionary<string,string> record)
+        {
+            if (Text_Email.Text ==  record.ElementAt(2).Value && Text_Password.Password.ToString() == record.ElementAt(4).Value)
+            {
+                Profile profile = new Profile();
+                profile.Show();
+                Close();
+            }
+            else { MessageBox.Show("Не верный логин или пароль"); }
+        }
+
     }
 }
