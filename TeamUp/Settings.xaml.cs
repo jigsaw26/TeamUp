@@ -45,24 +45,36 @@ namespace TeamUp
             string email = em.Substring(0, em.IndexOf('@')); 
             FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
             Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь 
-            my_TextBox.Text = data.ElementAt(3).Value;
-            my_TextBox2.Text = data.ElementAt(5).Value;
-            my_TextBox3.Text = data.ElementAt(0).Value;
-            my_TextBox4.Text = data.ElementAt(1).Value;
-            my_TextBox5.Text = data.ElementAt(2).Value; 
+            var Info = new UserInfo
+            {
+                userName = data.ElementAt(3).Value,
+                userSurname = data.ElementAt(5).Value,
+                userDateOfBirth = data.ElementAt(1).Value,
+                userCountry = data.ElementAt(0).Value,
+                userEmail = data.ElementAt(2).Value,
+                userPassword = data.ElementAt(4).Value
+            };
+
+            my_TextBox.Text = Info.userName;
+            my_TextBox2.Text = Info.userSurname;
+            my_TextBox3.Text = Info.userDateOfBirth;
+            my_TextBox4.Text = Info.userCountry;
+            my_TextBox5.Text = Info.userEmail; 
         }
 
         private void B_Save_Click(object sender, RoutedEventArgs e)
         {
             string em = С_Email.GetEmail();
             string email = em.Substring(0, em.IndexOf('@'));
-            FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
-            Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь 
-            my_TextBox.Text = data.ElementAt(3).Value;
-            my_TextBox2.Text = data.ElementAt(5).Value;
-            my_TextBox3.Text = data.ElementAt(0).Value;
-            my_TextBox4.Text = data.ElementAt(1).Value;
-            my_TextBox5.Text = data.ElementAt(2).Value; 
+            var Info = new UserInfo
+            {
+                userName = my_TextBox.Text,
+                userSurname = my_TextBox2.Text,
+                userDateOfBirth = my_TextBox3.Text,
+                userCountry = my_TextBox4.Text,
+                userEmail = my_TextBox5.Text
+            };
+            FirebaseResponse respone = Client.Set("users/" + email, Info);
         }
 
 
