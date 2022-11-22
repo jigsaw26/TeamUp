@@ -197,7 +197,7 @@ namespace TeamUp
 
             BitmapImage bi4 = new BitmapImage();
             bi4.BeginInit();
-            bi4.UriSource = new Uri("Images/batsiev-round-photo-1.png", UriKind.Relative);
+            bi4.UriSource = new Uri("Images/Like icon.png", UriKind.Relative);
             bi4.EndInit();
             Image img2 = new Image();
             img2.Source = bi4;
@@ -224,7 +224,7 @@ namespace TeamUp
 
             BitmapImage bi5 = new BitmapImage();
             bi5.BeginInit();
-            bi5.UriSource = new Uri("Images/batsiev-round-photo-1.png", UriKind.Relative);
+            bi5.UriSource = new Uri("Images/Reply icon.png", UriKind.Relative);
             bi5.EndInit();
             Image img3 = new Image();
             img3.Source = bi5;
@@ -251,7 +251,7 @@ namespace TeamUp
 
             BitmapImage bi6 = new BitmapImage();
             bi6.BeginInit();
-            bi6.UriSource = new Uri("Images/batsiev-round-photo-1.png", UriKind.Relative);
+            bi6.UriSource = new Uri("Images/Respot icon.png", UriKind.Relative);
             bi6.EndInit();
             Image img4 = new Image();
             img4.Source = bi6;
@@ -278,7 +278,7 @@ namespace TeamUp
 
             BitmapImage bi7 = new BitmapImage();
             bi7.BeginInit();
-            bi7.UriSource = new Uri("Images/batsiev-round-photo-1.png", UriKind.Relative);
+            bi7.UriSource = new Uri("Images/Shareicon.png", UriKind.Relative);
             bi7.EndInit();
             Image img5 = new Image();
             img5.Source = bi4;

@@ -278,22 +278,22 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <Image Source="Images/Like icon.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
                                     <TextBlock Height="30" Margin="20,5,0,0" Text="30" FontSize="25"></TextBlock>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <Image Source="Images/Reply icon.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
                                     <TextBlock Height="30" Margin="20,5,0,0" Text="30" FontSize="25"></TextBlock>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="3" Orientation="Horizontal">
-                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
+                                    <Image Source="Images/Repost icon.png" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"></Image>
                                     <TextBlock Height="30" Margin="20,0,0,0" Text="30" VerticalAlignment="Center" FontSize="25"></TextBlock>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="4" Orientation="Horizontal">
-                                    <Image Source="Images/batsiev-round-photo-1.png" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></Image> 
+                                    <Image Source="Images/Shareicon.png" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></Image> 
                                 </StackPanel> 
 
 
