@@ -53,8 +53,8 @@ namespace TeamUp
             string email = Text_Email.Text.Substring(0, Text_Email.Text.IndexOf('@'));
             while (true)
             {
-                FirebaseResponse res = await Client.GetAsync(@"users/" + email);
-                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString());
+                FirebaseResponse res = await Client.GetAsync(@"users/" + email); // Открываю нужную ветку в БД
+                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь  
                 Autorization(data);
                 break;
             }
@@ -62,7 +62,7 @@ namespace TeamUp
 
         void Autorization(Dictionary<string,string> record)
         {
-            if (Text_Email.Text ==  record.ElementAt(2).Value && Text_Password.Password.ToString() == record.ElementAt(4).Value)
+            if (Text_Email.Text ==  record.ElementAt(2).Value && Text_Password.Password.ToString() == record.ElementAt(4).Value) // Сравниваю емеил и пароль с БД
             {
                 Profile profile = new Profile();
                 profile.Show();

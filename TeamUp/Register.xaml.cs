@@ -55,7 +55,7 @@ namespace TeamUp
                 }
                 else
                 {
-                    LiveCall();
+                    LiveCall(); // Получаю список всех почт для проверки 
                 }
             }
 
@@ -77,8 +77,8 @@ namespace TeamUp
             string email = Text_Email.Text.Substring(0, Text_Email.Text.IndexOf('@'));
             try
             {
-                await Client.SetAsync("users/" + email, Info);
-                await Client.SetAsync("allEmail/" + rnd.Next(9999).ToString(), Text_Email.Text);
+                await Client.SetAsync("users/" + email, Info); // Создаю новый аккаунт
+                await Client.SetAsync("allEmail/" + rnd.Next(9999).ToString(), Text_Email.Text); // Вношу почту в БД
 
                 Login login = new Login();
                 login.Show();
@@ -87,13 +87,13 @@ namespace TeamUp
             catch { }
         }
 
-        async void LiveCall()
+        async void LiveCall() // Получаю список всех почт для проверки 
         {
 
             while (true)
             {
-                FirebaseResponse res = await Client.GetAsync(@"allEmail/");
-                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString());
+                FirebaseResponse res = await Client.GetAsync(@"allEmail/");  
+                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString());// Добавляю всё содержмое ветки в словарь  
                 CheckEmail(data);
                 break;
             }
