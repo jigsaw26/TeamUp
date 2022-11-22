@@ -41,11 +41,37 @@ namespace TeamUp
             Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (Text_Email.Text == "" || Text_Password.Password == "")
+<<<<<<< HEAD
                 MessageBox.Show("Заполните все поля");
             else LiveCall();
+=======
+                    MessageBox.Show("Заполните все поля");
+
+            // Проверка почты. Нужна для того что бы узнать зарегистрирована ли почта
+            FirebaseResponse chkMail = await Client.GetAsync(@"allEmail/");
+            Dictionary<string, string> dataMail = JsonConvert.DeserializeObject<Dictionary<string, string>>(chkMail.Body.ToString());
+ 
+            
+            int check = 0;
+            for (int i = 0; i < dataMail.Count; i++)
+            {
+                if (Text_Email.Text == dataMail.ElementAt(i).Value)
+                {
+                    check++;
+                }
+            }
+            if (check >= 1)
+            {
+                LiveCall(); // Если всё ок, пускаем дальше
+            }
+            else
+            {
+                MessageBox.Show("Не верный логин или пароль");
+            }
+>>>>>>> c336cae2f9cd74b80f13f90d8964cc489a7a2a0b
         }
 
         void LiveCall()
@@ -55,6 +81,7 @@ namespace TeamUp
             string email = Text_Email.Text.Substring(0, Text_Email.Text.IndexOf('@'));
             while (true)
             {
+<<<<<<< HEAD
                 FirebaseResponse res = Client.Get(@"users/" + email); // Открываю нужную ветку в БД
                 Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь
                 С_Email.SetEmail(data.ElementAt(2).Value);
@@ -66,6 +93,12 @@ namespace TeamUp
                     Close();
                     break;
                 } 
+=======
+                FirebaseResponse res = await Client.GetAsync(@"users/" + email); // Открываю нужную ветку в БД
+                Dictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(res.Body.ToString()); // Добавляю всё содержмое ветки в словарь  
+                Autorization(data);
+                break;
+>>>>>>> c336cae2f9cd74b80f13f90d8964cc489a7a2a0b
             }
         }
 

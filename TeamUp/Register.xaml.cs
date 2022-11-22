@@ -81,7 +81,7 @@ namespace TeamUp
         public async void Reg()
         {
             string g = Text_Country.Text;
-            MessageBox.Show(g);
+           
             Random rnd = new Random();
             var Info = new UserInfo
             {
