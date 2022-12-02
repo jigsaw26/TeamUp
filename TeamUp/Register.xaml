@@ -1,4 +1,4 @@
-﻿<Window x:Class="TeamUp.Register"
+﻿<Window x:Name="FormRegistr" x:Class="TeamUp.Register"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Register" Height="1024" Width="1440">
+        Title="Register" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormRegistr_MouseMove">
+    
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="30" />

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Settings" Height="736" Width="936" ResizeMode="NoResize" ShowInTaskbar="False">
+        Title="Settings" Height="736" Width="936" ResizeMode="NoResize" ShowInTaskbar="False"
+        WindowStyle="None">
 
 
 
@@ -180,7 +181,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Settings</Label>
+        <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0" Height="50">Settings</Label>
 
 
 
@@ -402,6 +403,6 @@
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0">Russian</Button>
         </Grid>
         <Button Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
-        <Button x:Name="Exit_Settings" Margin="0,00,200,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Exit Settings</Button>
+        <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Exit Settings</Button>
     </Grid>
 </Window>

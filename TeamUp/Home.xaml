@@ -1,4 +1,4 @@
-﻿<Window x:Class="TeamUp.Home"
+﻿<Window x:Name="FormHome" x:Class="TeamUp.Home"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Home" Height="1024" Width="1440">
+        Title="Home" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormHome_MouseMove">
+    
     <Window.Resources>
         <Style x:Key="BtnStyle">
             <Style.Setters>

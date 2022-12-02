@@ -1,4 +1,4 @@
-﻿<Window x:Class="TeamUp.InDev"
+﻿<Window x:Name="FormInDev" x:Class="TeamUp.InDev"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamUp"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="InDev" Height="1024" Width="1440">
+        Title="InDev" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormInDev_MouseMove">
 
     <Window.Resources>
 

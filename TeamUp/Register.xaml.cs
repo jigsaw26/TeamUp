@@ -1,19 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml;
-using FireSharp;
+using System.Linq; 
+using System.Windows; 
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
@@ -33,8 +22,8 @@ namespace TeamUp
         {
             InitializeComponent();
             Combo_Load();
-            this.WindowState = System.Windows.WindowState.Maximized;
             Client = new FireSharp.FirebaseClient(Config);
+             
         }
 
         public void Combo_Load()
@@ -53,8 +42,8 @@ namespace TeamUp
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
-        { 
-          
+        {
+            
             if (Text_Name.Text == "" || Text_Surname.Text == "" || Text_Country.Text == "" || Text_Date.Text == "" || Text_Email.Text == "" || Text_Password.Password == "" || Text_Password2.Password == "")
                 MessageBox.Show("Заполните все поля");
             else if (Text_Password.Password != Text_Password2.Password)
@@ -138,11 +127,11 @@ namespace TeamUp
 
 
         private void Open_LogIn_page_Click(object sender, RoutedEventArgs e)
-            {
-                Login login = new Login();
-                login.Show();
-                Close();
-            }
+        {
+            Login login = new Login(); 
+            login.Show();
+            Close();
+        }
 
 
          public int CheckPassword(string value)
@@ -178,7 +167,23 @@ namespace TeamUp
                  return x;
              }
          }
-        
+         
+
+        int fl = 0;
+        private void FormRegistr_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (fl == 0) LoadWindowState();
+            fl++;
+        }
+
+        void LoadWindowState()
+        {
+            this.Width = C_WindowState.GetWindowStateWidth();
+            this.Height = C_WindowState.GetWindowStateHeight();
+
+            this.Top = C_WindowState.GetWindowStateTop();
+            this.Left = C_WindowState.GetWindowStateLeft();
+        }
     }
 }
 

@@ -1,18 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml;
-using FireSharp;
+using System.Linq; 
+using System.Windows; 
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
@@ -27,6 +16,7 @@ namespace TeamUp
     {
         IFirebaseConfig Config = new FirebaseConfig { AuthSecret = "OwoqQp9UnoO3kygLu7OJL7mFXOdNL1oPHIbHyFLz", BasePath = "https://teamup-c8aff-default-rtdb.europe-west1.firebasedatabase.app" };
         IFirebaseClient Client;
+
         public Login()
         {
             InitializeComponent();
@@ -37,6 +27,10 @@ namespace TeamUp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Register reg = new Register();
+            C_WindowState.SetWindowStateHeight(this.Height);
+            C_WindowState.SetWindowStateWidth(this.Width);
+            C_WindowState.SetWindowStateTop(this.Top);
+            C_WindowState.SetWindowStateLeft(this.Left);  
             reg.Show();
             Close();
         }
@@ -44,7 +38,6 @@ namespace TeamUp
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (Text_Email.Text == "" || Text_Password.Password == "")
-
                 MessageBox.Show("Заполните все поля");
 
 
@@ -54,21 +47,11 @@ namespace TeamUp
  
             
             int check = 0;
-            for (int i = 0; i < dataMail.Count; i++)
-            {
-                if (Text_Email.Text == dataMail.ElementAt(i).Value)
-                {
-                    check++;
-                }
-            }
-            if (check >= 1)
-            {
-                LiveCall(); // Если всё ок, пускаем дальше
-            }
-            else
-            {
-                MessageBox.Show("Не верный логин или пароль");
-            }
+            for (int i = 0; i < dataMail.Count; i++) 
+                if (Text_Email.Text == dataMail.ElementAt(i).Value) check++;  
+
+            if (check >= 1) LiveCall(); // Если всё ок, пускаем дальше 
+            else MessageBox.Show("Не верный логин или пароль"); 
 
         }
 
@@ -87,6 +70,10 @@ namespace TeamUp
                 if (x == 1)
                 {
                     Profile profile = new Profile();
+                    C_WindowState.SetWindowStateHeight(this.Height);
+                    C_WindowState.SetWindowStateWidth(this.Width);
+                    C_WindowState.SetWindowStateTop(this.Top);
+                    C_WindowState.SetWindowStateLeft(this.Left);
                     profile.Show();
                     Close();
                     break;
@@ -105,6 +92,6 @@ namespace TeamUp
                 MessageBox.Show("Не верный логин или пароль");
                 return 0;
             }
-        }
+        } 
     }
 }

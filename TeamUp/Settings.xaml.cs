@@ -76,10 +76,7 @@ namespace TeamUp
             };
             FirebaseResponse respone = Client.Set("users/" + email, Info);
         }
-
-
-
-
+         
         private void B_Security_Click(object sender, RoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Hidden;
@@ -151,8 +148,7 @@ namespace TeamUp
                 Login log = new Login();
                 log.Show();
                 Close();
-            }
-            
+            } 
         }
 
         private void B_pass_Click(object sender, RoutedEventArgs e)
@@ -201,8 +197,7 @@ namespace TeamUp
                                         y++;
                                         MessageBox.Show(attr1.Value); 
                                         MessageBox.Show(Pass_Old.Password);
-                                        MessageBox.Show(Pass_New1.Password);
-
+                                        MessageBox.Show(Pass_New1.Password); 
                                     }
                                 }
                             }

@@ -23,13 +23,13 @@ namespace TeamUp
 
         public InDev()
         {
-            InitializeComponent();
-            this.WindowState = System.Windows.WindowState.Maximized;
+            InitializeComponent(); 
         }
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {
             Home home = new Home();
+            CWindowState();
             home.Show();
             Close();
         }
@@ -47,6 +47,7 @@ namespace TeamUp
         private void B_Messages_Click(object sender, RoutedEventArgs e)
         {
             InDev indev = new InDev();
+            CWindowState();
             indev.Show();
             Close();
         }
@@ -54,6 +55,7 @@ namespace TeamUp
         private void B_Notification_Click(object sender, RoutedEventArgs e)
         {
             InDev indev = new InDev();
+            CWindowState();
             indev.Show();
             Close();
         }
@@ -61,6 +63,7 @@ namespace TeamUp
         private void B_Events_Click(object sender, RoutedEventArgs e)
         {
             InDev indev = new InDev();
+            CWindowState();
             indev.Show();
             Close();
         }
@@ -68,8 +71,32 @@ namespace TeamUp
         private void B_Work_Click(object sender, RoutedEventArgs e)
         {
             InDev indev = new InDev();
+            CWindowState();
             indev.Show();
             Close();
         }
+        void CWindowState()
+        {
+            C_WindowState.SetWindowStateHeight(this.Height);
+            C_WindowState.SetWindowStateWidth(this.Width);
+            C_WindowState.SetWindowStateTop(this.Top);
+            C_WindowState.SetWindowStateLeft(this.Left);
+        }
+
+        int fl = 0;
+        private void FormInDev_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (fl == 0) LoadWindowState();
+            fl++;
+        }
+
+        void LoadWindowState()
+        {
+            this.Width = C_WindowState.GetWindowStateWidth();
+            this.Height = C_WindowState.GetWindowStateHeight();
+
+            this.Top = C_WindowState.GetWindowStateTop();
+            this.Left = C_WindowState.GetWindowStateLeft();
+        } 
     }
 }
