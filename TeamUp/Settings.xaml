@@ -198,7 +198,7 @@
         <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,172,85" Width="140" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
         <Rectangle Grid.Column="1" Grid.RowSpan="7" Width="2" Fill="#FFADADAD" HorizontalAlignment="Left" ></Rectangle>
 
-        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden" Background="White" >
+        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Hidden">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -286,7 +286,7 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
-            <TextBox Grid.Row="1" Name="my_TextBox3" Background="{x:Null}" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0"></TextBox>
+            <DatePicker  Grid.Row="1" Name="my_TextBox3" Background="{x:Null}" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0"></DatePicker>
 
             <TextBlock x:Name="my_TextBlock4" Grid.Row="1" FontSize="25" Foreground="LightGray" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0" Text="Country">
                 <TextBlock.Style>

@@ -184,6 +184,8 @@ namespace TeamUp
             this.Top = C_WindowState.GetWindowStateTop();
             this.Left = C_WindowState.GetWindowStateLeft();
         }
+
+       
     }
 }
 
