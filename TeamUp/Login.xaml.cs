@@ -77,7 +77,8 @@ namespace TeamUp
                     profile.Show();
                     Close();
                     break;
-                } 
+                }
+                else { break; }
             }
         }
 

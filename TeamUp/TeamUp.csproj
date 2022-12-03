@@ -37,7 +37,7 @@
     <None Remove="Images\Reply icon.png" />
     <None Remove="Images\Repost icon.png" />
     <None Remove="Images\settings icon test.png" />
-    <None Remove="Images\Shareicon.png" />
+    <None Remove="Images\Share icon.png" />
     <None Remove="Images\Work icon.png" />
     <None Remove="logo 5 small-01.png" />
   </ItemGroup>
@@ -63,7 +63,7 @@
     <Resource Include="Images\portrait-Kellermanns-round-e1575028630748-p443ff8adeueut8nnk2obtewhw7c3uza7177fsmppc.png" />
     <Resource Include="Images\Reply icon.png" />
     <Resource Include="Images\Repost icon.png" />
-    <Resource Include="Images\Shareicon.png" />
+    <Resource Include="Images\Share icon.png" />
     <Resource Include="Images\Work icon.png" />
   </ItemGroup>
 

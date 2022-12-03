@@ -294,7 +294,7 @@
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="4" Orientation="Horizontal">
-                                    <Image Source="Images/Shareicon.png" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></Image> 
+                                    <Image Source="Images/Share icon.png" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"></Image> 
                                 </StackPanel> 
 
 
