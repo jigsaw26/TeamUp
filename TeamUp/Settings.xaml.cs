@@ -29,6 +29,7 @@ namespace TeamUp
         public Settings()
         {
             InitializeComponent();
+       
             Client = new FireSharp.FirebaseClient(Config);
             //Tbox_Search.Text = "Search Settings";
         }

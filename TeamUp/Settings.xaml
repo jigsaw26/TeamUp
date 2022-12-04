@@ -192,13 +192,13 @@
             </Style>
         </TextBox.Resources>
         </TextBox>-->
-        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Your Account</Button>
+        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Account</Button>
         <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
         <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
         <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,172,85" Width="140" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
         <Rectangle Grid.Column="1" Grid.RowSpan="7" Width="2" Fill="#FFADADAD" HorizontalAlignment="Left" ></Rectangle>
 
-        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Hidden">
+        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -403,6 +403,6 @@
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0">Russian</Button>
         </Grid>
         <Button Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
-        <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Exit Settings</Button>
+        <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Back</Button>
     </Grid>
 </Window>
