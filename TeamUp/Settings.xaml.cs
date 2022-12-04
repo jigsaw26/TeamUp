@@ -155,16 +155,62 @@ namespace TeamUp
         {
             if (Pass_Old.Password == "" || Pass_New1.Password == "" || Pass_New2.Password == "")
                 MessageBox.Show("Заполните все поля");
+
+
             else
-            {  
-                if (Pass_New1.Password != Pass_New2.Password) MessageBox.Show("Новый пароль не совпадает"); 
+            {
+                if (Pass_New1.Password != Pass_New2.Password) MessageBox.Show("Новый пароль не совпадает");
+                
+                if (CheckPassword(Pass_New2.Password) != 3)
+                {
+                    MessageBox.Show("Пароль не соответствует требованиям");
+                }
+                if (IsEmail(Email.Text) == 0)
+                {
+                    MessageBox.Show("Вы ввели не правильный адресс электронной почты");
+                }
                 else
                 {
                     int Check = CheckPass();
                     if (Check != 2) MessageBox.Show("Старый пароль или логин не верный");
-                } 
+                }
             }
         }
+
+        public int CheckPassword(string value)
+        {
+            int x = 0;
+            if (value.Length >= 8) x++;
+            var Symbols = new[] { '(', '_', '!', '"', '№', ';', '%', ':', '?', '*', ')', '"' };
+            if (value.Any(ch => Symbols.Contains(ch))) x++;
+
+            int temp = 0;
+            for (int i = 0; i < value.Length; i++)
+                if (value[i] >= '0' && value[i] <= '9')
+                    temp++;
+
+
+            if (temp >= 1) x++;
+
+            return x;
+
+        }
+
+        public int IsEmail(string value)
+        {
+            int x = 0;
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(value);
+                x++;
+                return x;
+            }
+            catch
+            {
+                return x;
+            }
+        }
+
 
 
         public int CheckPass()
