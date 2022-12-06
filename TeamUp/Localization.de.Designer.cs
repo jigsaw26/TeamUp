@@ -22,14 +22,14 @@ namespace TeamUp {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Localization___Копировать {
+    internal class Localization_ {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Localization___Копировать() {
+        internal Localization_() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TeamUp {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TeamUp.Localization - Копировать", typeof(Localization___Копировать).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TeamUp.Localization.", typeof(Localization_).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на This page is under construction.
+        ///   Ищет локализованную строку, похожую на Ця сторінка знаходиться у розробці.
         /// </summary>
         internal static string DevPage1 {
             get {
@@ -70,7 +70,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Stay tuned for futher updates.
+        ///   Ищет локализованную строку, похожую на Слідкуйте за подальшими оновленнями.
         /// </summary>
         internal static string DevPage2 {
             get {
@@ -79,7 +79,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Back Home.
+        ///   Ищет локализованную строку, похожую на Повернутися додому.
         /// </summary>
         internal static string DevPage3 {
             get {
@@ -88,7 +88,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Follow.
+        ///   Ищет локализованную строку, похожую на Підписка.
         /// </summary>
         internal static string Follow {
             get {
@@ -97,7 +97,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на What&apos;s new?.
+        ///   Ищет локализованную строку, похожую на Що нового?.
         /// </summary>
         internal static string HomeNews1 {
             get {
@@ -106,7 +106,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Who to follow?.
+        ///   Ищет локализованную строку, похожую на Хто підписався?.
         /// </summary>
         internal static string HomeNews2 {
             get {
@@ -115,7 +115,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на What&apos;s new?.
+        ///   Ищет локализованную строку, похожую на Що нового?.
         /// </summary>
         internal static string HomePosts {
             get {
@@ -124,7 +124,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Andrew Rudenko.
+        ///   Ищет локализованную строку, похожую на Андрій Руденко.
         /// </summary>
         internal static string HomeProfile1 {
             get {
@@ -142,7 +142,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Developer.
+        ///   Ищет локализованную строку, похожую на Розробник.
         /// </summary>
         internal static string HomeProfile3 {
             get {
@@ -151,7 +151,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Languages.
+        ///   Ищет локализованную строку, похожую на Мови.
         /// </summary>
         internal static string Languages1 {
             get {
@@ -160,7 +160,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Select language that best suits you.
+        ///   Ищет локализованную строку, похожую на Виберіть мову, яка вам найбільше підходить.
         /// </summary>
         internal static string Languages2 {
             get {
@@ -169,7 +169,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на English.
+        ///   Ищет локализованную строку, похожую на Англійська.
         /// </summary>
         internal static string Languages3 {
             get {
@@ -178,7 +178,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ukranian.
+        ///   Ищет локализованную строку, похожую на Український.
         /// </summary>
         internal static string Languages4 {
             get {
@@ -187,7 +187,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Russian.
+        ///   Ищет локализованную строку, похожую на Російська.
         /// </summary>
         internal static string Languages5 {
             get {
@@ -196,7 +196,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Posts.
+        ///   Ищет локализованную строку, похожую на Пости.
         /// </summary>
         internal static string MainData1 {
             get {
@@ -205,7 +205,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Media.
+        ///   Ищет локализованную строку, похожую на Медіа.
         /// </summary>
         internal static string MainData2 {
             get {
@@ -214,7 +214,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Projects.
+        ///   Ищет локализованную строку, похожую на Проекти.
         /// </summary>
         internal static string MainData3 {
             get {
@@ -232,7 +232,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Home.
+        ///   Ищет локализованную строку, похожую на Додому.
         /// </summary>
         internal static string MainMenu1 {
             get {
@@ -241,7 +241,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Messages.
+        ///   Ищет локализованную строку, похожую на Повідомлення.
         /// </summary>
         internal static string MainMenu2 {
             get {
@@ -250,7 +250,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Notification.
+        ///   Ищет локализованную строку, похожую на Повідомлення.
         /// </summary>
         internal static string MainMenu3 {
             get {
@@ -259,7 +259,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Events.
+        ///   Ищет локализованную строку, похожую на Заходи.
         /// </summary>
         internal static string MainMenu4 {
             get {
@@ -268,7 +268,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Work.
+        ///   Ищет локализованную строку, похожую на Робота.
         /// </summary>
         internal static string MainMenu5 {
             get {
@@ -277,7 +277,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Settings.
+        ///   Ищет локализованную строку, похожую на Налаштування.
         /// </summary>
         internal static string MainMenu6 {
             get {
@@ -286,7 +286,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Andrew Rudenko.
+        ///   Ищет локализованную строку, похожую на Андрій Руденко.
         /// </summary>
         internal static string MainProfile1 {
             get {
@@ -304,7 +304,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ukraine, Odessa.
+        ///   Ищет локализованную строку, похожую на Україна, Одеса.
         /// </summary>
         internal static string MainProfile3 {
             get {
@@ -313,7 +313,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Born October 1, 2002.
+        ///   Ищет локализованную строку, похожую на Жовтень 1, 2022.
         /// </summary>
         internal static string MainProfile4 {
             get {
@@ -322,7 +322,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Contact Info.
+        ///   Ищет локализованную строку, похожую на Контактна інформація.
         /// </summary>
         internal static string MainProfile5 {
             get {
@@ -331,7 +331,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Edit Profile.
+        ///   Ищет локализованную строку, похожую на Змінити профіль.
         /// </summary>
         internal static string MainProfile6 {
             get {
@@ -340,7 +340,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Notifications.
+        ///   Ищет локализованную строку, похожую на Повідомлення.
         /// </summary>
         internal static string Notifications1 {
             get {
@@ -349,7 +349,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enable notifications.
+        ///   Ищет локализованную строку, похожую на Включити повідомлення.
         /// </summary>
         internal static string Notifications2 {
             get {
@@ -358,7 +358,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Preference.
+        ///   Ищет локализованную строку, похожую на Вподобання.
         /// </summary>
         internal static string Notifications3 {
             get {
@@ -367,7 +367,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Likes.
+        ///   Ищет локализованную строку, похожую на Лайки.
         /// </summary>
         internal static string Notifications4 {
             get {
@@ -376,7 +376,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Friends add.
+        ///   Ищет локализованную строку, похожую на Друзі.
         /// </summary>
         internal static string Notifications5 {
             get {
@@ -385,7 +385,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Messages.
+        ///   Ищет локализованную строку, похожую на Сообщения.
         /// </summary>
         internal static string Notifications6 {
             get {
@@ -394,7 +394,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Posts.
+        ///   Ищет локализованную строку, похожую на Пости.
         /// </summary>
         internal static string Notifications7 {
             get {
@@ -403,7 +403,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Email:.
+        ///   Ищет локализованную строку, похожую на Пошта:.
         /// </summary>
         internal static string Security1 {
             get {
@@ -412,7 +412,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter old password:.
+        ///   Ищет локализованную строку, похожую на Введіть старий пароль:.
         /// </summary>
         internal static string Security2 {
             get {
@@ -421,7 +421,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter new password:.
+        ///   Ищет локализованную строку, похожую на Введіть новий пароль:.
         /// </summary>
         internal static string Security3 {
             get {
@@ -430,7 +430,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Again new password:.
+        ///   Ищет локализованную строку, похожую на Введіть новий пароль ще раз:.
         /// </summary>
         internal static string Security4 {
             get {
@@ -439,7 +439,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Save.
+        ///   Ищет локализованную строку, похожую на Зберегти.
         /// </summary>
         internal static string Security5 {
             get {
@@ -448,7 +448,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Account .
+        ///   Ищет локализованную строку, похожую на Аккаунт.
         /// </summary>
         internal static string Setting1 {
             get {
@@ -457,7 +457,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Security.
+        ///   Ищет локализованную строку, похожую на Захист.
         /// </summary>
         internal static string Setting2 {
             get {
@@ -466,7 +466,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Notifications.
+        ///   Ищет локализованную строку, похожую на Повідомлення.
         /// </summary>
         internal static string Setting3 {
             get {
@@ -475,7 +475,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Languages.
+        ///   Ищет локализованную строку, похожую на Мова.
         /// </summary>
         internal static string Setting4 {
             get {
@@ -484,7 +484,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Log off.
+        ///   Ищет локализованную строку, похожую на Вийти.
         /// </summary>
         internal static string Setting5 {
             get {
@@ -493,7 +493,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Back.
+        ///   Ищет локализованную строку, похожую на Повернутися.
         /// </summary>
         internal static string Setting6 {
             get {
@@ -502,7 +502,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Show More.
+        ///   Ищет локализованную строку, похожую на Докладніше.
         /// </summary>
         internal static string ShowMore {
             get {

@@ -118,153 +118,153 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DevPage1" xml:space="preserve">
-    <value>Ця сторінка знаходиться у розробці</value>
+    <value>Diese Seite befindet sich im Aufbau</value>
   </data>
   <data name="DevPage2" xml:space="preserve">
-    <value>Слідкуйте за подальшими оновленнями</value>
+    <value>Bleiben Sie dran für weitere Updates</value>
   </data>
   <data name="DevPage3" xml:space="preserve">
-    <value>Повернутися додому</value>
+    <value>Zurück zuhause</value>
   </data>
   <data name="Follow" xml:space="preserve">
-    <value>Підписка</value>
+    <value>Abonnement</value>
   </data>
   <data name="HomeNews1" xml:space="preserve">
-    <value>Що нового?</value>
+    <value>Was gibt's Neues?</value>
   </data>
   <data name="HomeNews2" xml:space="preserve">
-    <value>Хто підписався?</value>
+    <value>Wer hat abonniert?</value>
   </data>
   <data name="HomePosts" xml:space="preserve">
-    <value>Що нового?</value>
+    <value>Was gibt's Neues?</value>
   </data>
   <data name="HomeProfile1" xml:space="preserve">
-    <value>Андрій Руденко</value>
+    <value>Andrij Rudenko</value>
   </data>
   <data name="HomeProfile2" xml:space="preserve">
     <value>@andrew_rudenko</value>
   </data>
   <data name="HomeProfile3" xml:space="preserve">
-    <value>Розробник</value>
+    <value>Entwickler</value>
   </data>
   <data name="Languages1" xml:space="preserve">
-    <value>Мови</value>
+    <value>Sprachen</value>
   </data>
   <data name="Languages2" xml:space="preserve">
-    <value>Виберіть мову, яка вам найбільше підходить</value>
+    <value>Wählen Sie die Sprache, die am besten zu Ihnen passt</value>
   </data>
   <data name="Languages3" xml:space="preserve">
-    <value>Англійська</value>
+    <value>Englisch</value>
   </data>
   <data name="Languages4" xml:space="preserve">
-    <value>Український</value>
+    <value>Deutsch</value>
   </data>
   <data name="Languages5" xml:space="preserve">
-    <value>Російська</value>
+    <value>Russisch</value>
   </data>
   <data name="MainData1" xml:space="preserve">
-    <value>Пости</value>
+    <value>Beiträge</value>
   </data>
   <data name="MainData2" xml:space="preserve">
-    <value>Медіа</value>
+    <value>Medien</value>
   </data>
   <data name="MainData3" xml:space="preserve">
-    <value>Проекти</value>
+    <value>Projekte</value>
   </data>
   <data name="MainData4" xml:space="preserve">
     <value>CV</value>
   </data>
   <data name="MainMenu1" xml:space="preserve">
-    <value>Додому</value>
+    <value>Heim</value>
   </data>
   <data name="MainMenu2" xml:space="preserve">
-    <value>Повідомлення</value>
+    <value>Nachricht</value>
   </data>
   <data name="MainMenu3" xml:space="preserve">
-    <value>Повідомлення</value>
+    <value>Nachricht</value>
   </data>
   <data name="MainMenu4" xml:space="preserve">
-    <value>Заходи</value>
+    <value>Aktivitäten</value>
   </data>
   <data name="MainMenu5" xml:space="preserve">
-    <value>Робота</value>
+    <value>Arbeit</value>
   </data>
   <data name="MainMenu6" xml:space="preserve">
-    <value>Налаштування</value>
+    <value>Einstellungen</value>
   </data>
   <data name="MainProfile1" xml:space="preserve">
-    <value>Андрій Руденко</value>
+    <value>Andrij Rudenko</value>
   </data>
   <data name="MainProfile2" xml:space="preserve">
     <value>@andrew_rudenko</value>
   </data>
   <data name="MainProfile3" xml:space="preserve">
-    <value>Україна, Одеса</value>
+    <value>Ukraine, Odessa</value>
   </data>
   <data name="MainProfile4" xml:space="preserve">
-    <value>Жовтень 1, 2022</value>
+    <value>1. Oktober 2022</value>
   </data>
   <data name="MainProfile5" xml:space="preserve">
-    <value>Контактна інформація</value>
+    <value>Kontaktinformationen</value>
   </data>
   <data name="MainProfile6" xml:space="preserve">
-    <value>Змінити профіль</value>
+    <value>Profil ändern</value>
   </data>
   <data name="Notifications1" xml:space="preserve">
-    <value>Повідомлення</value>
+    <value>Nachricht</value>
   </data>
   <data name="Notifications2" xml:space="preserve">
-    <value>Включити повідомлення</value>
+    <value>Schalten Sie die Nachricht ein</value>
   </data>
   <data name="Notifications3" xml:space="preserve">
-    <value>Вподобання</value>
+    <value>Likes</value>
   </data>
   <data name="Notifications4" xml:space="preserve">
-    <value>Лайки</value>
+    <value>Flüche</value>
   </data>
   <data name="Notifications5" xml:space="preserve">
-    <value>Друзі</value>
+    <value>Freunde</value>
   </data>
   <data name="Notifications6" xml:space="preserve">
-    <value>Сообщения</value>
+    <value>Mitteilungen</value>
   </data>
   <data name="Notifications7" xml:space="preserve">
-    <value>Пости</value>
+    <value>Beiträge</value>
   </data>
   <data name="Security1" xml:space="preserve">
-    <value>Пошта:</value>
+    <value>Post:</value>
   </data>
   <data name="Security2" xml:space="preserve">
-    <value>Введіть старий пароль:</value>
+    <value>Altes Passwort eingeben:</value>
   </data>
   <data name="Security3" xml:space="preserve">
-    <value>Введіть новий пароль:</value>
+    <value>Geben Sie ein neues Kennwort ein:</value>
   </data>
   <data name="Security4" xml:space="preserve">
-    <value>Введіть новий пароль ще раз:</value>
+    <value>Geben Sie das neue Passwort erneut ein:</value>
   </data>
   <data name="Security5" xml:space="preserve">
-    <value>Зберегти</value>
+    <value>Sparen</value>
   </data>
   <data name="Setting1" xml:space="preserve">
-    <value>Аккаунт</value>
+    <value>Konto</value>
   </data>
   <data name="Setting2" xml:space="preserve">
-    <value>Захист</value>
+    <value>Schutz</value>
   </data>
   <data name="Setting3" xml:space="preserve">
-    <value>Повідомлення</value>
+    <value>Nachricht</value>
   </data>
   <data name="Setting4" xml:space="preserve">
-    <value>Мова</value>
+    <value>Sprache</value>
   </data>
   <data name="Setting5" xml:space="preserve">
-    <value>Вийти</value>
+    <value>Hinausgehen</value>
   </data>
   <data name="Setting6" xml:space="preserve">
-    <value>Повернутися</value>
+    <value>Zurückkehren</value>
   </data>
   <data name="ShowMore" xml:space="preserve">
-    <value>Докладніше</value>
+    <value>Weiterlesen</value>
   </data>
 </root>
