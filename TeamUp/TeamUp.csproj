@@ -89,11 +89,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Localization.ua.Designer.cs">
-      <DependentUpon>Localization.ua.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Update="Localization.ru.Designer.cs">
       <DependentUpon>Localization.ru.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -107,10 +102,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Localization.ua.resx">
-      <LastGenOutput>Localization.ua.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Localization.ru.resx">
       <LastGenOutput>Localization.ru.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>

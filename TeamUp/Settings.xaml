@@ -398,9 +398,9 @@
             <Label FontSize="25" 
                Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Languages</Label>
             <Label Margin="50,70,0,0">Select language that best suits you</Label>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">English</Button>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Ukranian</Button>
-            <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0">Russian</Button>
+            <Button x:Name="B_En" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">English</Button>
+            <Button x:Name="B_Ger" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Germany</Button>
+            <Button x:Name="B_Rus" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0" Click="B_Rus_Click">Russian</Button>
         </Grid>
         <Button Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
         <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Back</Button>

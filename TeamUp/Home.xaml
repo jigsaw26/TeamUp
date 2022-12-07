@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Home" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormHome_MouseMove">
+        Title="Home" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormHome_MouseMove">
     
     <Window.Resources>
         <Style x:Key="BtnStyle">
@@ -121,7 +121,7 @@
                         <TextBlock Text="Andrew Rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6B6B6B" FontSize="18"></TextBlock>
                         <TextBlock Text="@andrew_rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#959595" FontSize="12"></TextBlock>
                         <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
-                        <TextBlock Margin="0,10,0,0" Text="Developer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#B8B8B8" FontSize="18"></TextBlock>
+                        <TextBlock x:Name="TB_Dev" Margin="0,10,0,0" Text="Developer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#B8B8B8" FontSize="18"></TextBlock>
                     </StackPanel>
 
                     
@@ -415,7 +415,7 @@
                             <Image Source="Images/images.jpg" Width="60" Height="60" Margin="0,10,0,0"></Image>
                             <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@paul_j</TextBlock>
                             <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Paul J.</TextBlock>
-                            <Button Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                            <Button x:Name="B_Follow1" Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
@@ -436,7 +436,7 @@
                             <Image Source="Images/Nikolia-round-image_.png" Width="60" Height="60" Margin="0,10,0,0"></Image>
                             <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@ann_h</TextBlock>
                             <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Ann H.</TextBlock>
-                            <Button Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                            <Button x:Name="B_Follow2" Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
@@ -458,7 +458,7 @@
                             <Image Source="Images/portrait-Kellermanns-round-e1575028630748-p443ff8adeueut8nnk2obtewhw7c3uza7177fsmppc.png" Width="60" Height="60" Margin="0,10,0,0"></Image>
                             <TextBlock Grid.Column="1" Foreground="#B8B8B8" FontSize="12" Margin="0,35,0,0">@peter_o</TextBlock>
                             <TextBlock  Grid.Column="1" Foreground="#6B6B6B" FontSize="18" Margin="0,15,0,0" >Peter O.</TextBlock>
-                            <Button Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
+                            <Button x:Name="B_Follow3" Style="{StaticResource BtnAnim}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"   FontSize="15" Width="93" Height="28" Content="Follow" BorderBrush="#FAB810" Background="#FAB810" Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
@@ -470,7 +470,7 @@
 
 
 
-                        <Button Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="20" Width="80">Show More</Button>
+                        <Button x:Name="B_ShowMore" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="20" Width="80">Show More</Button>
 
                     </StackPanel>
 

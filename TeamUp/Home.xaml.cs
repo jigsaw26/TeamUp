@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,7 +39,9 @@ namespace TeamUp
             {
                 Grid grid2 = new Grid();
                 GridMass[i] = grid2;
-            }
+            } 
+
+            Localiz(); 
         }
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
@@ -333,5 +337,26 @@ namespace TeamUp
             this.Top = C_WindowState.GetWindowStateTop();
             this.Left = C_WindowState.GetWindowStateLeft();
         } 
+
+        void Localiz()
+        {
+            int resIndx = C_Localization.GetLanguage();
+            if (resIndx == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+            }
+            B_Home.Content = Localization.MainMenu1;
+            B_Messages.Content = Localization.MainMenu2;
+            B_Notification.Content = Localization.MainMenu3;
+            B_Events.Content = Localization.MainMenu4;
+            B_Work.Content = Localization.MainMenu5;
+            B_Settings.Content = Localization.MainMenu6;
+            TB_Dev.Text = Localization.HomeProfile3;
+            B_Follow1.Content = Localization.Follow;
+            B_Follow2.Content = Localization.Follow;
+            B_Follow3.Content = Localization.Follow;
+            B_ShowMore.Content = Localization.ShowMore;
+            B_Post.Content = Localization.Notifications7;
+        }
     }
 }

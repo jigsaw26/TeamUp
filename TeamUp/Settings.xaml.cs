@@ -262,7 +262,12 @@ namespace TeamUp
         {
             С_Settigs.SetWindow(0);
             Close();
-        } 
+        }
+
+        private void B_Rus_Click(object sender, RoutedEventArgs e)
+        {
+            C_Localization.SetLanguageRu(); 
+        }
     } 
 }
 

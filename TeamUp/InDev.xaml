@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamUp"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="InDev" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormInDev_MouseMove">
+        Title="InDev" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormInDev_MouseMove">
 
     <Window.Resources>
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Register" Height="1024" Width="1440" MinWidth="1440" MinHeight="924" MouseMove="FormRegistr_MouseMove">
+        Title="Register" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormRegistr_MouseMove">
     
     <Window.Resources>
         <Style TargetType="TextBox">
