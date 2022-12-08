@@ -26,24 +26,31 @@ namespace TeamUp
 
         public static int GetLanguage()
         {
-            if (obj.rus == 1) return obj.rus; 
+            if (obj.rus == 3) return obj.rus;
             else if (obj.nem == 2) return obj.nem;
-            else return obj.en;
+            else if (obj.en == 1) return obj.en;
+            else return 0;
         }
 
         public static void SetLanguageRu()
         {
-            obj.rus = 1;
+            obj.rus = 3;
+            obj.nem = 0;
+            obj.en = 0;
         }
 
         public static void SetLanguageNem()
         {
             obj.nem = 2;
+            obj.rus = 0;
+            obj.en = 0;
         }
 
         public static void SetLanguageEn()
         {
-            obj.en = 3;
+            obj.en = 1;
+            obj.nem = 0;
+            obj.rus = 0;
         } 
     }
 }

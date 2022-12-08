@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,7 +25,38 @@ namespace TeamUp
 
         public InDev()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+
+            int resIndx = C_Localization.GetLanguage();
+            if (resIndx == 3)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                Localiz();
+            }
+            if (resIndx == 2)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                Localiz();
+            }
+            if (resIndx == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                Localiz();
+            }
+        }
+
+        void Localiz()
+        {
+            B_Home.Content = Localization.MainMenu1;
+            B_Messages.Content = Localization.MainMenu2;
+            B_Notification.Content = Localization.MainMenu3;
+            B_Events.Content = Localization.MainMenu4;
+            B_Work.Content = Localization.MainMenu5;
+            B_Settings.Content = Localization.MainMenu6;
+
+            L_construction.Content = Localization.DevPage1;
+            L_updates.Content = Localization.DevPage2;
+            B_Home1.Content = Localization.DevPage3;
         }
 
         private void B_Home_Click(object sender, RoutedEventArgs e)

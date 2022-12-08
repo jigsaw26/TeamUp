@@ -201,7 +201,7 @@
                 </Grid> 
 
                     <!--последняя строка-->
-                <Button Style="{StaticResource BtnAnim}" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20,0,20,20" FontSize="24" Width="325" Height="55" Content="Back Home" BorderBrush="#FAB810" Background="#FAB810" Foreground="White" Click="B_Home_Click">
+                <Button x:Name="B_Home1" Style="{StaticResource BtnAnim}" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20,0,20,20" FontSize="24" Width="325" Height="55" Content="Back Home" BorderBrush="#FAB810" Background="#FAB810" Foreground="White" Click="B_Home_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="30"/>
@@ -211,8 +211,8 @@
 
                 <!--первая строка-->
                 <StackPanel Grid.Row="0" Margin="30,20,0,0">
-                    <Label HorizontalAlignment="Center" Foreground="#585858" FontSize="40" FontWeight="Bold">This page is under construction</Label>
-                    <Label HorizontalAlignment="Center" Foreground="#959595" FontSize="15">Stay tuned for futher updates</Label>
+                    <Label x:Name="L_construction" HorizontalAlignment="Center" Foreground="#585858" FontSize="40" FontWeight="Bold">This page is under construction</Label>
+                    <Label x:Name="L_updates" HorizontalAlignment="Center" Foreground="#959595" FontSize="15">Stay tuned for futher updates</Label>
                 </StackPanel>
 
             </Grid>

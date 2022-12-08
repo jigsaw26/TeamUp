@@ -181,7 +181,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0" Height="50">Settings</Label>
+        <Label x:Name="L_Settings" FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0" Height="50">Settings</Label>
 
 
 
@@ -208,7 +208,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             
-            <Label FontSize="25" 
+            <Label x:Name="L_YourAccount" FontSize="25" 
                Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Your Account</Label>
             <TextBlock x:Name="my_TextBlock" Grid.Row="1" Foreground="LightGray" Height="60" Width="300" FontSize="25" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Name">
                 <TextBlock.Style>
@@ -364,13 +364,13 @@
             </Grid.RowDefinitions>
             <Label FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
                Foreground="#585858" FontWeight="Bold" Margin="50,-270,0,0">Change Password</Label>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,-170,0,0">Email:</Label>
+            <Label x:Name="L_Email" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,-170,0,0">Email:</Label>
             <TextBox x:Name="Email" Width="250" Height="50" Margin="0,-50,220,0"></TextBox>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,50,0,0">Enter old password:</Label>
+            <Label x:Name="L_oldPass" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,50,0,0">Enter old password:</Label>
             <PasswordBox x:Name="Pass_Old" Width="250" Height="50" Margin="0,150,220,0"></PasswordBox>
-            <Label Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,300,0,0">Enter new password:</Label>
+            <Label x:Name="L_newPass" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,300,0,0">Enter new password:</Label>
             <PasswordBox x:Name="Pass_New1" Grid.RowSpan="2" Width="250" Height="50" Margin="0,30,220,0"></PasswordBox>
-            <Label Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,200,0,0">Again new password:</Label>
+            <Label x:Name="L_AgainPass" Grid.RowSpan="2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,200,0,0">Again new password:</Label>
             <PasswordBox x:Name="Pass_New2" Grid.RowSpan="2" Width="250" Height="50" Margin="0,300,220,0"></PasswordBox>
             <Button x:Name="B_pass"  Background="Orange" Grid.Row="6" FontSize="15" Width="325" Height="55" Content="Save" Foreground="White" BorderBrush="White"
                     HorizontalAlignment="Left" Margin="50,100,0,0" Click="B_pass_Click">
@@ -383,26 +383,26 @@
         </Grid>
         <Grid x:Name="btn3" Grid.Column="1" Grid.RowSpan="4" Visibility="Hidden" >
             <!--Notifications-->
-            <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Notifications</Label>
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="50,0,0,200" >Enable notifications</CheckBox>
+            <Label x:Name="L_Notifications" FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Notifications</Label>
+            <CheckBox x:Name="L_EnableNotif" Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="50,0,0,200" >Enable notifications</CheckBox>
 
-            <Label FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,150,0,0">Preferences</Label>
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,50,0,0" >Likes</CheckBox>
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,150,0,0" >Firends add</CheckBox>
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,250,0,0" >Messages</CheckBox>
-            <CheckBox Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,350,0,0" >Posts</CheckBox>
+            <Label x:Name="L_Preferences" FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,150,0,0">Preferences</Label>
+            <CheckBox x:Name="CB_Likes" Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,50,0,0" >Likes</CheckBox>
+            <CheckBox x:Name="CB_Firends" Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,150,0,0" >Firends add</CheckBox>
+            <CheckBox x:Name="CB_Messages" Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,250,0,0" >Messages</CheckBox>
+            <CheckBox x:Name="CB_Posts" Style="{StaticResource CheckStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" Foreground="#0B4F6C" Margin="100,350,0,0" >Posts</CheckBox>
 
         </Grid>
         <Grid x:Name="btn4" Grid.Column="1" Grid.RowSpan="7" Visibility="Hidden">
             <!--languages-->
-            <Label FontSize="25" 
+            <Label x:Name="L_Languages" FontSize="25" 
                Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0">Languages</Label>
-            <Label Margin="50,70,0,0">Select language that best suits you</Label>
-            <Button x:Name="B_En" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">English</Button>
-            <Button x:Name="B_Ger" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0">Germany</Button>
+            <Label x:Name="L_SelectLanguage" Margin="50,70,0,0">Select language that best suits you</Label>
+            <Button x:Name="B_En" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0" Click="B_En_Click">English</Button>
+            <Button x:Name="B_Ger" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,200,0,0" Click="B_Ger_Click">Germany</Button>
             <Button x:Name="B_Rus" Style="{StaticResource BtnStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,250,0,0" Click="B_Rus_Click">Russian</Button>
         </Grid>
-        <Button Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
+        <Button x:Name="B_LogOff" Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
         <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Back</Button>
     </Grid>
 </Window>

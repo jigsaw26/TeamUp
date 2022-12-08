@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +25,45 @@ namespace TeamUp
 
         public Profile()
         {
-            InitializeComponent(); 
-        } 
+            InitializeComponent();
+
+            int resIndx = C_Localization.GetLanguage();
+            if (resIndx == 3)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                Localiz();
+            }
+            if (resIndx == 2)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                Localiz();
+            }
+            if (resIndx == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                Localiz();
+            }
+
+        }
+
+        void Localiz()
+        {
+            B_Home.Content = Localization.MainMenu1;
+            B_Messages.Content = Localization.MainMenu2;
+            B_Notification.Content = Localization.MainMenu3;
+            B_Events.Content = Localization.MainMenu4;
+            B_Work.Content = Localization.MainMenu5;
+            B_Settings.Content = Localization.MainMenu6;
+            L_country.Content = Localization.MainProfile3;
+            L_born.Content = Localization.MainProfile4;
+            L_conactinfo.Content = Localization.MainProfile5;
+            B_EditProf.Content = Localization.MainProfile6;
+            L_Posts.Content = Localization.MainData1;
+            L_Media.Content = Localization.MainData2;
+            L_Projects.Content = Localization.MainData3;
+            L_CV.Content = Localization.MainData4;
+        }
+
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {

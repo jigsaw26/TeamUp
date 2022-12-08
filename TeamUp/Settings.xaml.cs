@@ -12,6 +12,9 @@ using System.Collections.Generic;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using System.Linq;
+using System.Runtime;
+using System.Globalization;
+using System.Threading;
 
 namespace TeamUp
 {
@@ -32,6 +35,52 @@ namespace TeamUp
        
             Client = new FireSharp.FirebaseClient(Config);
             //Tbox_Search.Text = "Search Settings";
+
+
+            int resIndx = C_Localization.GetLanguage();
+            if (resIndx == 3)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                Localiz();
+            }
+            if (resIndx == 2)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                Localiz();
+            }
+            if (resIndx == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                Localiz();
+            }
+        }
+
+
+        void Localiz()
+        {
+            L_Languages.Content = Localization.Languages1;
+            L_SelectLanguage.Content = Localization.Languages2;
+            B_En.Content = Localization.Languages3;
+            B_Ger.Content = Localization.Languages4;
+            B_Rus.Content = Localization.Languages5;
+
+            B_Account.Content = Localization.Setting1;
+            B_Security.Content = Localization.Setting2;
+            B_Notifications.Content = Localization.Setting3;
+            B_Languages.Content = Localization.Setting4;
+            B_LogOff.Content = Localization.Setting5;
+            Exit_Settings.Content = Localization.Setting6;
+
+            L_Settings.Content = Localization.MainMenu6; 
+            B_Save.Content = Localization.Security5;
+
+            L_Notifications.Content = Localization.Notifications1;
+            L_EnableNotif.Content = Localization.Notifications2;
+            L_Preferences.Content = Localization.Notifications3;
+            CB_Likes.Content = Localization.Notifications4;
+            CB_Firends.Content = Localization.Notifications5;
+            CB_Messages.Content = Localization.Notifications6;
+            CB_Posts.Content = Localization.Notifications7; 
         }
 
         private void B_Account_Click(object sender, RoutedEventArgs e)
@@ -267,6 +316,16 @@ namespace TeamUp
         private void B_Rus_Click(object sender, RoutedEventArgs e)
         {
             C_Localization.SetLanguageRu(); 
+        }
+
+        private void B_Ger_Click(object sender, RoutedEventArgs e)
+        {
+            C_Localization.SetLanguageNem();
+        }
+
+        private void B_En_Click(object sender, RoutedEventArgs e)
+        {
+            C_Localization.SetLanguageEn();
         }
     } 
 }

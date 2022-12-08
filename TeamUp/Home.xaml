@@ -347,7 +347,7 @@
 
 
                     <StackPanel>
-                        <TextBlock HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">What's new</TextBlock>
+                        <TextBlock x:Name="TB_What" HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">What's new</TextBlock>
 
                         <StackPanel>
                             <TextBlock Margin="30,20,5,5" Foreground="#B8B8B8" FontSize="10">Theme| Trending</TextBlock>
@@ -402,7 +402,7 @@
 
 
                     <StackPanel  Width="296" Height="356">
-                        <TextBlock HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">Who to follow</TextBlock>
+                        <TextBlock x:Name="TB_follow" HorizontalAlignment="Left" Margin="30,30,10,10" FontSize="18" Foreground="#585858" FontWeight="Bold">Who to follow</TextBlock>
 
                         <Grid>
 
