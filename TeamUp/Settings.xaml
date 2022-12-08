@@ -368,7 +368,7 @@
 
         <Rectangle Grid.Column="1" Grid.RowSpan="7" Width="2" Fill="#FF312E2E" HorizontalAlignment="Left" ></Rectangle>
         <Button x:Name="B_LogOff" Margin="50,30,200,30" Width="100" Style="{StaticResource BtnStyle}" Grid.Row="5" Click="Button_Click">Log off</Button>
-        <Button x:Name="Exit_Settings" Margin="0,00,100,30" Width="150" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Back</Button>
+        <Button x:Name="Exit_Settings" Margin="0,00,60,30" Width="190" Style="{StaticResource BtnStyle}" Grid.Row="6" Click="Exit_Settings_Click">Back</Button>
     </Grid>
     </Border>
 </Window>

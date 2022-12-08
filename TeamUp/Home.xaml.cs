@@ -74,6 +74,7 @@ namespace TeamUp
             B_Follow2.Content = Localization.Follow;
             B_Follow3.Content = Localization.Follow;
             B_ShowMore.Content = Localization.ShowMore;
+            B_ShowMore2.Content = Localization.ShowMore;
             B_Post.Content = Localization.Notifications7;
             TB_What.Text = Localization.HomeNews1;
             TB_follow.Text = Localization.HomeNews2;
