@@ -17,16 +17,19 @@ using System.Windows.Shapes;
 namespace TeamUp
 {
     /// <summary>
-    /// Логика взаимодействия для Profile.xaml
+    /// Логика взаимодействия для Messages.xaml
     /// </summary>
-    public partial class Profile : Window
+    public partial class Messages : Window
     {
-        Boolean WindowOpened = false; 
+        //Это флаг по сокрытию текста подсказки в поле поиска
+        int x = 0;
 
-        public Profile()
+        int flagPost = 1; 
+
+        public Messages()
         {
-            InitializeComponent();
-
+            InitializeComponent();   
+             
             int resIndx = C_Localization.GetLanguage();
             if (resIndx == 3)
             {
@@ -43,7 +46,6 @@ namespace TeamUp
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
                 Localiz();
             }
-
         }
 
         void Localiz()
@@ -54,16 +56,14 @@ namespace TeamUp
             B_Events.Content = Localization.MainMenu4;
             B_Work.Content = Localization.MainMenu5;
             B_Settings.Content = Localization.MainMenu6;
-            L_country.Content = Localization.MainProfile3;
-            L_born.Content = Localization.MainProfile4;
-            L_conactinfo.Content = Localization.MainProfile5;
-            B_EditProf.Content = Localization.MainProfile6;
-            L_Posts.Content = Localization.MainData1;
-            L_Media.Content = Localization.MainData2;
-            L_Projects.Content = Localization.MainData3;
-            L_CV.Content = Localization.MainData4;
+            TB_Dev.Text = Localization.HomeProfile3;
+            B_Follow1.Content = Localization.Follow;
+            B_Follow2.Content = Localization.Follow;
+            B_Follow3.Content = Localization.Follow;
+            B_ShowMore.Content = Localization.ShowMore; 
+            TB_What.Text = Localization.HomeNews1;
+            TB_follow.Text = Localization.HomeNews2;
         }
-
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {
@@ -88,9 +88,9 @@ namespace TeamUp
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)
         {
-            Messages messages = new Messages();
+            InDev indev = new InDev();
             CWindowState();
-            messages.Show();
+            indev.Show();
             Close();
         }
 
@@ -118,11 +118,14 @@ namespace TeamUp
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e) //profile click -> profile page 
         {
-
+            Profile prof = new Profile();
+            CWindowState();
+            prof.Show();
+            Close();
         }
-
+          
         void CWindowState()
         {
             C_WindowState.SetWindowStateHeight(this.Height);
@@ -132,19 +135,19 @@ namespace TeamUp
         }
 
         int fl = 0;
-        private void FormProfile_MouseMove(object sender, MouseEventArgs e)
+        private void FormMessages_MouseMove(object sender, MouseEventArgs e)
         {
             if (fl == 0) LoadWindowState();
             fl++;
         }
 
         void LoadWindowState()
-        { 
+        {
             this.Width = C_WindowState.GetWindowStateWidth();
             this.Height = C_WindowState.GetWindowStateHeight();
 
             this.Top = C_WindowState.GetWindowStateTop();
             this.Left = C_WindowState.GetWindowStateLeft();
-        } 
+        }
     }
-}
+} 

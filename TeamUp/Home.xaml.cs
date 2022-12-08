@@ -60,7 +60,7 @@ namespace TeamUp
                 Localiz();
             } 
         }
-         
+
         void Localiz()
         {
             B_Home.Content = Localization.MainMenu1;
@@ -102,9 +102,9 @@ namespace TeamUp
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)
         {
-            InDev indev = new InDev();
+            Messages messages = new Messages();
             CWindowState();
-            indev.Show();
+            messages.Show();
             Close();
         }
 
