@@ -91,9 +91,12 @@ namespace TeamUp
         { 
             if (С_Settigs.GetWindow() == 0)
             {
-                С_Settigs.SetWindow(1);
+                С_Settigs.SetWindow(1); 
+
                 Settings settings = new Settings();
-                settings.Show();
+                settings.Owner = this;
+
+                if (settings.ShowDialog() == true) { } 
             }  
         }
 
