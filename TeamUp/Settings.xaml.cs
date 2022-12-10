@@ -32,7 +32,9 @@ namespace TeamUp
         public Settings()
         {
             InitializeComponent();
-       
+
+            Combo_Load();
+
             Client = new FireSharp.FirebaseClient(Config);
             //Tbox_Search.Text = "Search Settings";
 
@@ -108,9 +110,26 @@ namespace TeamUp
             my_TextBox.Text = Info.userName;
             my_TextBox2.Text = Info.userSurname;
             my_TextBox3.Text = Info.userDateOfBirth;
-            my_TextBox4.Text = Info.userCountry;
+            Text_Country.Text = Info.userCountry;
             my_TextBox5.Text = Info.userEmail; 
         }
+
+
+        public void Combo_Load()
+
+        {
+            CultureInfo[] cinfo = CultureInfo.GetCultures(CultureTypes.AllCultures & ~CultureTypes.NeutralCultures);
+            foreach (CultureInfo cul in cinfo)
+
+            {
+                int pos = cul.EnglishName.LastIndexOf('(');
+                string temp = cul.EnglishName.Substring(pos + 1);
+                string country = temp.Substring(0, temp.IndexOf(')'));
+                Text_Country.Items.Add(country);
+            }
+
+        }
+
 
         private void B_Save_Click(object sender, RoutedEventArgs e)
         {
@@ -121,7 +140,7 @@ namespace TeamUp
                 userName = my_TextBox.Text,
                 userSurname = my_TextBox2.Text,
                 userDateOfBirth = my_TextBox3.Text,
-                userCountry = my_TextBox4.Text,
+                userCountry = Text_Country.Text,
                 userEmail = my_TextBox5.Text
             };
             FirebaseResponse respone = Client.Set("users/" + email, Info);

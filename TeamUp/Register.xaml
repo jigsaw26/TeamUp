@@ -365,11 +365,13 @@
             </Grid.RowDefinitions>
 
             <ListBox Grid.Row="3" Margin="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0">
+                
+                
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="Focusable" Value="False" />
- 
-                    </Style>
+                     </Style>
+                    
                 </ListBox.ItemContainerStyle>
                 <ListBoxItem>
                     <StackPanel>
@@ -398,19 +400,19 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">DATE OF BIRTH</TextBlock>
-                        <DatePicker  x:Name="Text_Date"  Width="545" Height="40">
-                            <!--<DatePicker .Resources>
+                        <DatePicker FontSize="25" x:Name="Text_Date"  Width="545" Height="40" FontFamily="Global User Interface" Foreground="#FFB8B8B8">
+                            <DatePicker.Resources>
                                 <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
+                                    <Setter Property="CornerRadius" Value="5"/>
                                 </Style>
-                            </DatePicker>-->
+                            </DatePicker.Resources>
                         </DatePicker>
                     </StackPanel>
                 </ListBoxItem>
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">COUNTRY</TextBlock>
-                        <ComboBox x:Name="Text_Country" Width="545" Height="40" FontSize="24">
+                        <ComboBox x:Name="Text_Country" Width="545" Height="40" FontSize="24" FontFamily="Global User Interface" Foreground="#FFB8B8B8" Background="White">
                             <ComboBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -441,6 +443,13 @@
                     <TextBlock FontFamily="Global User Interface" Foreground="#FFB8B8B8">REPEAT PASSWORD</TextBlock>
                     <PasswordBox x:Name="Text_Password2"  Width="545"></PasswordBox>
                 </StackPanel>
+
+                <ListBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                </ListBox.Resources>
+
             </ListBox>
 
             <Button x:Name="Open_Profile_page" FontSize="24" Style="{StaticResource BtnAnim}" Margin="20,5,20,5" Foreground="White"  Grid.Row="4" Content="Start Using TeamUp" Click="Button_Click">

@@ -185,7 +185,7 @@
         <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,172,85" Width="140" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
         
 
-        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Visible">
+        <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Hidden">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -248,8 +248,14 @@
                         </TextBlock.Style>
                     </TextBlock>
                     <TextBox Grid.Row="1" Name="my_TextBox2" Background="{x:Null}" Grid.RowSpan="2" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,50,0,0"></TextBox>
- 
-                    <DatePicker  Grid.Row="1" Name="my_TextBox3" Background="{x:Null}" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0"></DatePicker>
+
+                <DatePicker  FontFamily="Global User Interface" Foreground="#FFB8B8B8" FontSize="30" Grid.Row="1" Name="my_TextBox3" Background="{x:Null}" Grid.RowSpan="3" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,100,0,0">
+                    <DatePicker.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
 
                     <TextBlock x:Name="my_TextBlock4" Grid.Row="1" FontSize="25" Foreground="LightGray" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0" Text="Country">
                         <TextBlock.Style>
@@ -275,9 +281,16 @@
                             </Style>
                         </TextBlock.Style>
                     </TextBlock>
-                    <TextBox Grid.Row="1" Name="my_TextBox4" Background="{x:Null}" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0"></TextBox>
+                    <!--<TextBox Grid.Row="1" Name="my_TextBox4" Background="{x:Null}" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0"></TextBox>-->
+                <ComboBox Grid.Row="1" x:Name="Text_Country" Grid.RowSpan="4" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,150,0,0" FontSize="24" FontFamily="Global User Interface" Foreground="#FFB8B8B8" Background="White">
+                    <ComboBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </ComboBox.Resources>
+                </ComboBox>
 
-                    <TextBlock x:Name="my_TextBlock5" Grid.Row="1" FontSize="25" Foreground="LightGray"  Grid.RowSpan="5" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,200,0,0" Text="Password">
+                <TextBlock x:Name="my_TextBlock5" Grid.Row="1" FontSize="25" Foreground="LightGray"  Grid.RowSpan="5" Height="60" Width="300" HorizontalAlignment="Left" Margin="50,200,0,0" Text="Password">
                         <TextBlock.Style>
                             <!--Установка стиля-->
                             <Style>

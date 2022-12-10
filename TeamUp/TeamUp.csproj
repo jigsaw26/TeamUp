@@ -29,15 +29,19 @@
     <None Remove="Images\images.jpg" />
     <None Remove="Images\Like icon.png" />
     <None Remove="Images\logo 5 small-01.png" />
+    <None Remove="Images\Messages icon active.png" />
     <None Remove="Images\Messages icon.png" />
     <None Remove="Images\Nikolia-round-image_.png" />
+    <None Remove="Images\Notifications icon active.png" />
     <None Remove="Images\Notifications icon.png" />
     <None Remove="Images\Place icon.png" />
     <None Remove="Images\portrait-Kellermanns-round-e1575028630748-p443ff8adeueut8nnk2obtewhw7c3uza7177fsmppc.png" />
     <None Remove="Images\Reply icon.png" />
     <None Remove="Images\Repost icon.png" />
+    <None Remove="Images\settings icon active.png" />
     <None Remove="Images\settings icon test.png" />
     <None Remove="Images\Share icon.png" />
+    <None Remove="Images\Work icon active.png" />
     <None Remove="Images\Work icon.png" />
     <None Remove="logo 5 small-01.png" />
   </ItemGroup>
@@ -58,12 +62,16 @@
     <Resource Include="Images\Image icon.png" />
     <Resource Include="Images\images.jpg" />
     <Resource Include="Images\Like icon.png" />
+    <Resource Include="Images\Messages icon active.png" />
     <Resource Include="Images\Nikolia-round-image_.png" />
+    <Resource Include="Images\Notifications icon active.png" />
     <Resource Include="Images\Place icon.png" />
     <Resource Include="Images\portrait-Kellermanns-round-e1575028630748-p443ff8adeueut8nnk2obtewhw7c3uza7177fsmppc.png" />
     <Resource Include="Images\Reply icon.png" />
     <Resource Include="Images\Repost icon.png" />
+    <Resource Include="Images\settings icon active.png" />
     <Resource Include="Images\Share icon.png" />
+    <Resource Include="Images\Work icon active.png" />
     <Resource Include="Images\Work icon.png" />
   </ItemGroup>
 

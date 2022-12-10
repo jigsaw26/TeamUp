@@ -82,10 +82,10 @@ namespace TeamUp
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
         {
-            Home home = new Home();
-            CWindowState();
-            home.Show();
-            Close();
+            //Home home = new Home();
+            //CWindowState();
+            //home.Show();
+            //Close();
         }
 
         private void B_Settings_Click(object sender, RoutedEventArgs e)

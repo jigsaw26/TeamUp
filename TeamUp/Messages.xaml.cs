@@ -89,10 +89,10 @@ namespace TeamUp
 
         private void B_Messages_Click(object sender, RoutedEventArgs e)
         {
-            InDev indev = new InDev();
-            CWindowState();
-            indev.Show();
-            Close();
+            //InDev indev = new InDev();
+            //CWindowState();
+            //indev.Show();
+            //Close();
         }
 
         private void B_Notification_Click(object sender, RoutedEventArgs e)
