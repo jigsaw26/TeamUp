@@ -1,0 +1,206 @@
+﻿<Window x:Name="FormEvents" x:Class="TeamUp.Events"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeamUp"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Messages" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormEvents_MouseMove">
+    <Window.Resources>
+        <Style x:Key="BtnStyle">
+            <Style.Setters>
+                <Setter Property="Button.FontSize" Value="25"></Setter>
+                <Setter Property="Button.VerticalContentAlignment" Value="Center"></Setter>
+                <Setter Property="Button.Background" Value="White"></Setter>
+                <Setter Property="Button.BorderThickness" Value="0"></Setter>
+                <Setter Property="Button.Width" Value="250"></Setter>
+                <Setter Property="Button.Height" Value="50" ></Setter>
+                <Setter Property="Button.HorizontalContentAlignment" Value="Left"></Setter>
+                <Setter Property="Button.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="Border">
+                                <Grid>
+                                    <Rectangle Name="FocusCue" Visibility="Hidden"
+                        StrokeThickness="1" StrokeDashArray="1 2"/>
+                                    <ContentPresenter Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#FFE2E2E2" />
+                                    <Setter TargetName="Border" Property="CornerRadius" Value="20"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Black" />
+                                    <Setter TargetName="Border" Property="Background" Value="MistyRose" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+
+        </Style>
+
+        <Style x:Key="BtnAnim">
+            <Setter Property="Button.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border  BorderThickness="3" CornerRadius="15"
+                Background="Orange" TextBlock.Foreground="White" Name="Border">
+                            <Grid>
+                                <Rectangle Name="FocusCue" Visibility="Hidden"
+                        StrokeThickness="1" StrokeDashArray="1 2"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FFBD7A00" />
+
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FF5A3A00" />
+
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="FocusCue" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Gray" />
+                                <Setter TargetName="Border" Property="Background" Value="MistyRose" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Border">
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="3" Opacity="0.2" Direction="1000" BlurRadius="10"></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="CornerRadius" Value="35"></Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <Border CornerRadius="0" Background="White" Grid.RowSpan="3"></Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="360"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel HorizontalAlignment="Left">
+                <Image Width="100" Height="100" Margin="57,23,0,0" HorizontalAlignment="Left" Source="logo 5 small-01.png"></Image>
+                <TextBox Width="296" Height="46" Margin="57,23,0,0" Visibility="Hidden"></TextBox>
+
+                <!--ссылка на пользователя-->
+                <Grid Height="206" Width="296" Margin="27,0,0,0" >
+
+                    <Border></Border>
+
+                    <StackPanel>
+                        <Image Source="Images/batsiev-round-photo-1.png" Height="79" Width="77" VerticalAlignment="Top" Margin="0,15,0,0" MouseDown="Image_MouseDown"></Image>
+                        <TextBlock Text="Andrew Rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6B6B6B" FontSize="18"></TextBlock>
+                        <TextBlock Text="@andrew_rudenko" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#959595" FontSize="12"></TextBlock>
+                        <Line  Stroke="Black" StrokeDashArray="8 8" X2="10000" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="TB_Dev" Margin="0,10,0,0" Text="Developer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#B8B8B8" FontSize="18"></TextBlock>
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Grid Height="350" Margin="57,43,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <!--Кнопка Home-->
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" IsEnabled="False" Source="/Images/Home icon unactive.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Home" FontSize="24" Margin="20,0,0,0" Content="Home" Width="180px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Home_Click"/>
+                    </StackPanel>
+
+                    <!--Кнопка Messages-->
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" Source="/Images/Messages icon.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Messages" FontSize="24" Margin="20,0,0,0" Content="Messages" Width="180px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Messages_Click"/>
+                    </StackPanel>
+
+                    <!--Кнопка Notification-->
+                    <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" Source="/Images/Notifications icon.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Notification" FontSize="24" Margin="20,0,0,0" Content="Notification" Width="180px" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="B_Notification_Click"/>
+                    </StackPanel>
+
+                    <!--Кнопка Events-->
+                    <StackPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" Source="/Images/Event icon.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Events" FontSize="24" Margin="20,0,0,0" Content="Events" Width="180px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Events_Click"/>
+                    </StackPanel>
+
+                    <!--Кнопка Work-->
+                    <StackPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" Source="/Images/Work icon.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Work" FontSize="24" Margin="20,0,0,0" Content="Work" Width="180px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Work_Click"/>
+                    </StackPanel>
+
+                    <!--Кнопка Settings-->
+                    <StackPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="25" Height="25" Source="/Images/settings icon test.png"></Image>
+                        <Button Style="{StaticResource BtnStyle}" x:Name="B_Settings" FontSize="24" Margin="20,0,0,0" Content="Settings" Width="180px" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Click="B_Settings_Click"/>
+                    </StackPanel>
+
+                </Grid>
+            </StackPanel>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.ColumnSpan="3" FontWeight="Bold" FontSize="60" HorizontalAlignment="Center">Welcome to the Events</Label>
+                <Label Grid.ColumnSpan="3" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">Stay tuned futher updates</Label>
+                <Border Grid.Row="1" Height="350" Width="480" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel>
+                        <Label FontWeight="Bold" FontSize="36" Margin="50,0,0,0">Event_Name</Label>
+                        <Label FontSize="30" Margin="50,0,0,0">Event_Creator</Label>
+                        <Label FontSize="30" Margin="50,50,0,0">Data:</Label>
+                        <Label FontSize="30" Margin="50,0,0,0"> 10.10.2022</Label>
+                        <Button Width="200" Height="60" FontSize="30" Background="White" BorderThickness="3"> Attend
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="30"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                   
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
