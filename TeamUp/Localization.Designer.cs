@@ -178,7 +178,7 @@ namespace TeamUp {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ukranian.
+        ///   Ищет локализованную строку, похожую на Deutsch.
         /// </summary>
         internal static string Languages4 {
             get {
@@ -507,6 +507,24 @@ namespace TeamUp {
         internal static string ShowMore {
             get {
                 return ResourceManager.GetString("ShowMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stay tuned futher updates.
+        /// </summary>
+        internal static string Stay {
+            get {
+                return ResourceManager.GetString("Stay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добро пожаловать на события.
+        /// </summary>
+        internal static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }

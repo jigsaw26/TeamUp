@@ -267,4 +267,10 @@
   <data name="ShowMore" xml:space="preserve">
     <value>Weiterlesen</value>
   </data>
+  <data name="Stay" xml:space="preserve">
+    <value>Bleiben Sie dran, weitere Updates</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Willkommen bei den Veranstaltungen</value>
+  </data>
 </root>
