@@ -107,6 +107,7 @@
         </Button>
 
         <Button
+            Style="{StaticResource BtnAnim}"
             Name="CancelButton"
             Content="Cancel" 
             Height="30" 
