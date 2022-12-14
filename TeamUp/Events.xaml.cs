@@ -83,5 +83,21 @@ namespace TeamUp
             C_WindowState.SetWindowStateTop(this.Top);
             C_WindowState.SetWindowStateLeft(this.Left);
         }
+
+        int fl = 0;
+        private void FormEvents_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (fl == 0) LoadWindowState();
+            fl++;
+        }
+
+        void LoadWindowState()
+        {
+            this.Width = C_WindowState.GetWindowStateWidth();
+            this.Height = C_WindowState.GetWindowStateHeight();
+
+            this.Top = C_WindowState.GetWindowStateTop();
+            this.Left = C_WindowState.GetWindowStateLeft();
+        }
     }
 }

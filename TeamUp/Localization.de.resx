@@ -162,6 +162,18 @@
   <data name="Languages5" xml:space="preserve">
     <value>Russisch</value>
   </data>
+  <data name="lol1" xml:space="preserve">
+    <value>Allemaal</value>
+  </data>
+  <data name="lol2" xml:space="preserve">
+    <value>Primair</value>
+  </data>
+  <data name="lol3" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="lol4" xml:space="preserve">
+    <value>Verzoeken</value>
+  </data>
   <data name="MainData1" xml:space="preserve">
     <value>Beiträge</value>
   </data>
