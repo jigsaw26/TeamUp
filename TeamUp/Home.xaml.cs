@@ -120,7 +120,7 @@ namespace TeamUp
 
         private void B_Events_Click(object sender, RoutedEventArgs e)
         {
-            InDev indev = new InDev();
+            Events indev = new Events();
             CWindowState();
             indev.Show();
             Close();

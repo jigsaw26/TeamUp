@@ -157,7 +157,7 @@
     <value>English</value>
   </data>
   <data name="Languages4" xml:space="preserve">
-    <value>Ukranian</value>
+    <value>Deutsch</value>
   </data>
   <data name="Languages5" xml:space="preserve">
     <value>Russian</value>
@@ -278,5 +278,11 @@
   </data>
   <data name="ShowMore" xml:space="preserve">
     <value>Show More</value>
+  </data>
+  <data name="Stay" xml:space="preserve">
+    <value>Stay tuned futher updates</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Добро пожаловать на события</value>
   </data>
 </root>
