@@ -162,6 +162,18 @@
   <data name="Languages5" xml:space="preserve">
     <value>Русский</value>
   </data>
+  <data name="lol1" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="lol2" xml:space="preserve">
+    <value>Начальный</value>
+  </data>
+  <data name="lol3" xml:space="preserve">
+    <value>Главные</value>
+  </data>
+  <data name="lol4" xml:space="preserve">
+    <value>Запросы</value>
+  </data>
   <data name="MainData1" xml:space="preserve">
     <value>Посты</value>
   </data>

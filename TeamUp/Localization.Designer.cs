@@ -196,6 +196,42 @@ namespace TeamUp {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на All.
+        /// </summary>
+        internal static string lol1 {
+            get {
+                return ResourceManager.GetString("lol1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Primary.
+        /// </summary>
+        internal static string lol2 {
+            get {
+                return ResourceManager.GetString("lol2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на General.
+        /// </summary>
+        internal static string lol3 {
+            get {
+                return ResourceManager.GetString("lol3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Requests.
+        /// </summary>
+        internal static string lol4 {
+            get {
+                return ResourceManager.GetString("lol4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Posts.
         /// </summary>
         internal static string MainData1 {
