@@ -211,7 +211,7 @@
 
                             <Grid Width="auto" HorizontalAlignment="Left">
 
-                                <Button Width="120px" Height="40px" HorizontalAlignment="Left" Margin="30,0,0,0"  BorderBrush="#FAB810" 
+                                <Button x:Name="B_All" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="30,0,0,0"  BorderBrush="#FAB810" 
                                         Background="#FAB810" Foreground="White" FontSize="20" Content="All">
                                     <Button.Resources>
                                         <Style TargetType="Border">
@@ -220,7 +220,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Width="120px" Height="40px" HorizontalAlignment="Left" Margin="180,0,0,0" 
+                                <Button x:Name="B_Primary" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="180,0,0,0" 
                                         Background="White" FontSize="20" Content="Primary" Foreground="#FF707070">
                                     <Button.Resources>
                                         <Style TargetType="Border">
@@ -229,7 +229,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Width="120px" Height="40px" HorizontalAlignment="Left" Margin="330,0,0,0"
+                                <Button x:Name="B_General" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="330,0,0,0"
                                         Background="White" FontSize="20" Content="General" Foreground="#FF707070">
                                     <Button.Resources>
                                         <Style TargetType="Border">
@@ -238,7 +238,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Width="120px" Height="40px" HorizontalAlignment="Left" Margin="480,0,0,0"
+                                <Button x:Name="B_Requests" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="480,0,0,0"
                                         Background="White" FontSize="20" Content="Requests" Foreground="#FF707070">
                                     <Button.Resources>
                                         <Style TargetType="Border">
