@@ -235,19 +235,19 @@
                         </Grid>
                     
                         <WrapPanel Grid.Row="1">
-                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="100,0,0,0">
-                                <Image Source="Images/Image icon.png" Width="15" Height="15"  ></Image>
+                            <Button x:Name="image_at" BorderBrush="White" Background="White" Width="20" Height="20"  Margin="100,0,0,0" Click="image_at_Click">
+                                <Image  Source="Images/Image icon.png" Width="15" Height="15"  ></Image>
                             </Button>
-                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
-                                <Image Source="Images/GIF icon.png" Width="15" Height="15"></Image>
+                                <Button x:Name="gif_at" BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0" Click="gif_at_Click">
+                                <Image  Source="Images/GIF icon.png" Width="15" Height="15"></Image>
                             </Button>
-                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Button x:Name="graph_at" BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
                                 <Image Source="Images/Graph icon.png" Width="15" Height="15"></Image>
                             </Button>
-                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Button x:Name="emoji_at" BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
                                 <Image Source="Images/Emoji icon.png" Width="15" Height="15" ></Image>
                             </Button>
-                            <Button BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
+                                <Button x:Name="place_at" BorderBrush="White" Background="White" Width="20" Height="20"  Margin="20,0,0,0">
                                 <Image Source="Images/Place icon.png" Width="15" Height="15" ></Image>
                             </Button>
 

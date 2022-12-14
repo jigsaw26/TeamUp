@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -148,6 +149,9 @@ namespace TeamUp
             x++;
         }
 
+        BitmapImage attachement = null;
+        MediaElement attachement_gif = null;
+
         private void B_Post_Click(object sender, RoutedEventArgs e)
         { 
             #region Создание первой половины поста
@@ -174,6 +178,7 @@ namespace TeamUp
             row2.Height = new GridLength(2.0, GridUnitType.Star);
             grid.RowDefinitions.Add(row2);
             grid.RowDefinitions.Add(new RowDefinition());
+
 
             Border B1 = new Border();
             Grid.SetRowSpan(B1, 2);
@@ -219,13 +224,42 @@ namespace TeamUp
             t_Text.Text = Tbox_Post.Text;
             grid.Children.Add(t_Text);
 
+
+            if (attachement != null) {   //attaching images to the post
+
+                BitmapImage at = attachement;                
+                Image at_img = new Image();
+                at_img.Source = at;
+                
+                at_img.HorizontalAlignment = HorizontalAlignment.Center;
+                at_img.VerticalAlignment = VerticalAlignment.Bottom;
+                at_img.Margin = new Thickness(0, 100, 0, 0);
+                grid.Children.Add(at_img);
+
+                attachement = null;
+            }
+
+            if (attachement_gif != null)
+            {                               //attaching gif to the post
+
+                MediaElement at1 = attachement_gif;
+
+                at1.HorizontalAlignment = HorizontalAlignment.Center;
+                at1.VerticalAlignment = VerticalAlignment.Bottom;
+                at1.Margin = new Thickness(0, 100, 0, 0);
+                grid.Children.Add(at1);
+
+                attachement_gif = null;
+            }
+
+
             #endregion
 
 
             #region Вторая половина поста
 
             Grid grid2 = new Grid();
-            Grid.SetRow(grid2, 1);
+            Grid.SetRow(grid2, 2);
             grid.Children.Add(grid2);
 
             ColumnDefinition col = new ColumnDefinition();
@@ -375,8 +409,31 @@ namespace TeamUp
 
             this.Top = C_WindowState.GetWindowStateTop();
             this.Left = C_WindowState.GetWindowStateLeft();
-        } 
+        }
 
-        
+        private void image_at_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";            
+            if (op.ShowDialog() == true)
+            {
+                attachement = new BitmapImage(new Uri(op.FileName));
+                MessageBox.Show("File is attached ");
+            }
+        }
+
+        private void gif_at_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "GIF Files(*.gif) | *.gif";          
+            if (op.ShowDialog() == true)
+            {
+                attachement_gif = new MediaElement();
+                attachement_gif.Source = new Uri(op.FileName);
+                MessageBox.Show("File is attached ");
+            }
+        }
     }
 }
