@@ -64,6 +64,10 @@ namespace TeamUp
             B_ShowMore2.Content = Localization.ShowMore;
             TB_What.Text = Localization.HomeNews1;
             TB_follow.Text = Localization.HomeNews2;
+            B_All.Content = Localization.lol1;
+            B_Primary.Content = Localization.lol2;
+            B_General.Content = Localization.lol3;
+            B_Requests.Content = Localization.lol4;
         }
 
         private void B_Home_Click(object sender, RoutedEventArgs e)
@@ -105,7 +109,7 @@ namespace TeamUp
 
         private void B_Events_Click(object sender, RoutedEventArgs e)
         {
-            InDev indev = new InDev();
+            Events indev = new Events();
             CWindowState();
             indev.Show();
             Close();

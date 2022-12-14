@@ -20,6 +20,7 @@
     <None Remove="Images\depositphotos_5323703-stock-photo-sign-radiation.jpg" />
     <None Remove="Images\devbg.jpg" />
     <None Remove="Images\Emoji icon.png" />
+    <None Remove="Images\Event icon active.png" />
     <None Remove="Images\Event icon.png" />
     <None Remove="Images\fb_icon_325x325.png" />
     <None Remove="Images\GIF icon.png" />
@@ -57,6 +58,7 @@
   <ItemGroup>
     <Resource Include="Images\devbg.jpg" />
     <Resource Include="Images\Emoji icon.png" />
+    <Resource Include="Images\Event icon active.png" />
     <Resource Include="Images\GIF icon.png" />
     <Resource Include="Images\Graph icon.png" />
     <Resource Include="Images\Image icon.png" />
