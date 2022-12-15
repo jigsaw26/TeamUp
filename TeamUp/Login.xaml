@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="1024" Width="1440"
-        MinWidth="1440" MinHeight="924">  
+        Title="Login"
+    Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+             Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        MinWidth="720" MinHeight="480"
+        >
+
+    <!--Height="1024" Width="1440" MinWidth="1440" MinHeight="924"-->
 
     <Window.Resources>
         <ResourceDictionary>
@@ -17,8 +22,16 @@
                 <ResourceDictionary Source="BasicStyles0.1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+    
+    
+    
+    
     </Window.Resources>
 
+    
+    
+    
+    
 
     <Grid>
         <Grid.RowDefinitions>
@@ -142,6 +155,10 @@
                 <PasswordBox x:Name="Text_Password" BorderBrush="Black" Grid.Row="1"  Width="500" Height="55"></PasswordBox>
             </Grid>
 
+            <CheckBox x:Name="remember_me" Grid.Row="4" Content="Remember Me" HorizontalAlignment="Center" IsChecked="False" Foreground="#FFB8B8B8" FontSize="16" FontFamily="Global User Interface">
+                
+            </CheckBox>
+            
             <Button x:Name="Text_Sign" Style="{StaticResource BtnAnim}" Grid.Row="4" FontSize="15" Width="325" 
                     Height="55" Content="Sign In" Click="Button_Click_1">
             </Button>

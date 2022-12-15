@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -145,6 +146,18 @@ namespace TeamUp
 
             this.Top = C_WindowState.GetWindowStateTop();
             this.Left = C_WindowState.GetWindowStateLeft();
-        } 
+        }
+
+        private void profile_pic_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
+            if (op.ShowDialog() == true)
+            {
+                profile_pic.Source = new BitmapImage(new Uri(op.FileName));
+                MessageBox.Show("Profile picture is changed ");
+            }
+        }
     }
 }

@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Home" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormHome_MouseMove">
-    
+        Title="Home"  MouseMove="FormHome_MouseMove"
+        MinWidth="720" MinHeight="480">
+
+    <!--Height="1024" Width="1920" MinWidth="1440" MinHeight="924"-->
+
     <Window.Resources>
         <Style x:Key="BtnStyle">
             <Style.Setters>

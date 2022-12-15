@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq; 
 using System.Windows; 
 using FireSharp.Config;
@@ -22,6 +23,19 @@ namespace TeamUp
             InitializeComponent();
             this.WindowState = System.Windows.WindowState.Maximized;
             Client = new FireSharp.FirebaseClient(Config);
+
+            RemMe_read();
+            if (is_checked == "true")
+            {
+                Text_Email.Text = email;
+                Text_Password.Password= password;
+                remember_me.IsChecked = true;
+            }
+            else if (is_checked == "true")
+            {
+               
+                remember_me.IsChecked = false;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -48,11 +62,56 @@ namespace TeamUp
             
             int check = 0;
             for (int i = 0; i < dataMail.Count; i++) 
-                if (Text_Email.Text == dataMail.ElementAt(i).Value) check++;  
+                if (Text_Email.Text == dataMail.ElementAt(i).Value) check++;
 
-            if (check >= 1) LiveCall(); // Если всё ок, пускаем дальше 
+            if (check >= 1)
+            {     // Если всё ок, пускаем дальше
+                RemMe_write();
+                LiveCall(); 
+            }
+             
             else MessageBox.Show("Не верный логин или пароль"); 
 
+        }
+
+        public void RemMe_write()
+        {
+            if (remember_me.IsChecked==true)
+            {
+               
+                using StreamWriter file = new("autofill.txt");
+                file.WriteLine("true");
+                file.WriteLine(Text_Email.Text);
+                file.WriteLine(Text_Password.Password);
+                file.Close();
+            }
+
+
+            else if (remember_me.IsChecked == false)
+            {
+
+                using StreamWriter file = new("autofill.txt");
+                file.WriteLine("false");
+               
+                file.Close();
+            }
+        }
+
+
+        string is_checked;
+        string email;
+        string password;
+
+        public void RemMe_read()
+        {
+
+            using StreamReader file = new("autofill.txt");
+            is_checked= file.ReadLine();
+            email = file.ReadLine();
+            password = file.ReadLine();
+            file.Close();
+
+            
         }
 
         void LiveCall()

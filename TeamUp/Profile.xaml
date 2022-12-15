@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:TeamUp"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="1024" Width="1920" MinWidth="1440" MinHeight="924" MouseMove="FormProfile_MouseMove">
-    
+        Title="MainWindow" Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+             Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        MinWidth="720" MinHeight="480"
+        MouseMove="FormProfile_MouseMove">
+
+    <!--Height="1024" Width="1440" MinWidth="1440" MinHeight="924"-->
+
     <Window.Resources>
 
         <Style TargetType="TextBox">
@@ -225,7 +230,7 @@
                     </Button>
 
                     <!--Картинка профиля-->
-                    <Image HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,-80,0,0" Width="173" Height="178" Source="/Images/batsiev-round-photo-1.png"></Image>
+                    <Image x:Name="profile_pic" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,-80,0,0" Width="173" Height="178" Source="/Images/batsiev-round-photo-1.png" MouseDown="profile_pic_MouseDown"></Image>
                     
                     <!--Вторая строка-->
                     <StackPanel Grid.Row="1" Margin="30,0,0,0">
