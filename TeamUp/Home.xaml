@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Home"  MouseMove="FormHome_MouseMove"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+             Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         MinWidth="720" MinHeight="480" Icon="/logo 5 small-01.png">
 
     <!--Height="1024" Width="1920" MinWidth="1440" MinHeight="924"-->
@@ -393,7 +395,7 @@
 
                         </StackPanel>
 
-                        <Button x:Name="B_ShowMore2" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,30,150,0" FontSize="15" Height="30" Width="95"> Show More</Button>
+                        <Button Style="{StaticResource BtnAnim}" x:Name="B_ShowMore2" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,30,150,0" FontSize="15" Height="30" Width="95"> Show More</Button>
 
                     </StackPanel>
 
@@ -482,7 +484,7 @@
 
 
 
-                        <Button x:Name="B_ShowMore" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="30" Width="95">Show More</Button>
+                        <Button Style="{StaticResource BtnAnim}" x:Name="B_ShowMore" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="30" Width="95">Show More</Button>
 
                     </StackPanel>
 

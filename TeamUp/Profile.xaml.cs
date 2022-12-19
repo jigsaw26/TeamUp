@@ -43,8 +43,7 @@ namespace TeamUp
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
                 Localiz();
-            }
-
+            } 
         }
 
         void Localiz()
@@ -83,7 +82,7 @@ namespace TeamUp
                 Settings settings = new Settings();
                 settings.Owner = this;
 
-                if (settings.ShowDialog() == true) { }
+                if (settings.ShowDialog() == true) { }  
             }
         }
 

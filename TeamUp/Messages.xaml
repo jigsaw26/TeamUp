@@ -212,7 +212,7 @@
 
                             <Grid Width="auto" HorizontalAlignment="Left">
 
-                                <Button x:Name="B_All" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="30,0,0,0"  BorderBrush="#FAB810" 
+                                <Button Style="{StaticResource BtnAnim}" x:Name="B_All" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="30,0,0,0"  BorderBrush="#FAB810" 
                                         Background="#FAB810" Foreground="White" FontSize="20" Content="All">
                                     <Button.Resources>
                                         <Style TargetType="Border">
@@ -221,31 +221,121 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button x:Name="B_Primary" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="180,0,0,0" 
+                                <Button  x:Name="B_Primary" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="180,0,0,0" 
                                         Background="White" FontSize="20" Content="Primary" Foreground="#FF707070">
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="20"/>
-                                        </Style>
-                                    </Button.Resources>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                                                <Border.Background>
+                                                    <SolidColorBrush x:Name="BorderColor" Color="White" />
+                                                </Border.Background>
+                                                <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup Name="CommonStates">
+                                                        <VisualState Name="MouseOver">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                        <VisualState Name="Normal">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
                                 </Button>
 
                                 <Button x:Name="B_General" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="330,0,0,0"
                                         Background="White" FontSize="20" Content="General" Foreground="#FF707070">
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="20"/>
-                                        </Style>
-                                    </Button.Resources>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                                                <Border.Background>
+                                                    <SolidColorBrush x:Name="BorderColor" Color="White" />
+                                                </Border.Background>
+                                                <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup Name="CommonStates">
+                                                        <VisualState Name="MouseOver">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                        <VisualState Name="Normal">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
                                 </Button>
 
                                 <Button x:Name="B_Requests" Width="120px" Height="40px" HorizontalAlignment="Left" Margin="480,0,0,0"
                                         Background="White" FontSize="20" Content="Requests" Foreground="#FF707070">
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="20"/>
-                                        </Style>
-                                    </Button.Resources>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                                                <Border.Background>
+                                                    <SolidColorBrush x:Name="BorderColor" Color="White" />
+                                                </Border.Background>
+                                                <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup Name="CommonStates">
+                                                        <VisualState Name="MouseOver">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                        <VisualState Name="Normal">
+                                                            <Storyboard>
+                                                                <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
                                 </Button> 
                                 
                             </Grid> 
@@ -397,7 +487,8 @@
 
                         </StackPanel>
 
-                        <Button x:Name="B_ShowMore2" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,30,150,0" FontSize="15" Height="20" Width="80">Show More</Button>
+                        <Button Style="{StaticResource BtnAnim}" x:Name="B_ShowMore2" Foreground="#FAB810" Background="White" BorderBrush="White" 
+                                Margin="0,30,150,0" FontSize="15" Height="30" Width="95">Show More</Button>
 
                     </StackPanel>
 
@@ -487,7 +578,8 @@
 
 
 
-                        <Button x:Name="B_ShowMore" Foreground="#FAB810" Background="White" BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="30" Width="95">Show More</Button>
+                        <Button Style="{StaticResource BtnAnim}" x:Name="B_ShowMore" Foreground="#FAB810" Background="White" 
+                                BorderBrush="White" Margin="0,10,150,0" FontSize="15" Height="30" Width="95">Show More</Button>
 
                     </StackPanel>
 

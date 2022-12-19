@@ -179,10 +179,10 @@
         </Grid.RowDefinitions>
         <Label x:Name="L_Settings" FontSize="25" Foreground="#585858" FontWeight="Bold" Margin="50,20,0,0" Height="50">Settings</Label>
  
-        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="170" Grid.Row="2" Click="B_Account_Click">Account</Button>
-        <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,175,0" Width="100" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
-        <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,125,0" Width="150" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
-        <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,172,85" Width="140" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
+        <Button x:Name="B_Account" Style="{StaticResource BtnStyle}"  Margin="38,35,142,25" Width="200" Grid.Row="2" Click="B_Account_Click">Account</Button>
+            <Button x:Name="B_Security" Style="{StaticResource BtnStyle}" Margin="0,0,75,0" Width="200" Grid.Row="2" Grid.RowSpan="2" Click="B_Security_Click">Security</Button>
+        <Button x:Name="B_Notifications" Style="{StaticResource BtnStyle}" Margin="0,0,75,0" Width="200" Grid.Row="2" Grid.RowSpan="3" Click="B_Notifications_Click">Notifications</Button>
+        <Button x:Name="B_Languages" Style="{StaticResource BtnStyle}" Margin="38,85,142,85" Width="200" Grid.Row="3" Grid.RowSpan="2" Click="B_Languages_Click">Languages</Button>
         
 
         <Grid x:Name="btn1" Grid.Column="1" Grid.RowSpan="7"  Background="White" Visibility="Hidden">

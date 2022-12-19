@@ -194,11 +194,41 @@
                         <Label FontSize="30" Margin="50,50,0,0">Data:</Label>
                         <Label FontSize="30" Margin="50,0,0,0"> 10.10.2022</Label>
                         <Button Width="200" Height="60" FontSize="30" Background="White" BorderThickness="3"> Attend
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="30"/>
-                                </Style>
-                            </Button.Resources>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="25"
+                BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}">
+
+                                        <Border.Background>
+                                            <SolidColorBrush x:Name="BorderColor" Color="White" />
+                                        </Border.Background>
+                                        <ContentControl Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup Name="CommonStates">
+                                                <VisualState Name="MouseOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="#FFE2E2E2" />
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState Name="Normal">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                    Storyboard.TargetProperty="Color" To="White" />
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
                     </StackPanel>
                    

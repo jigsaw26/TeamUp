@@ -38,7 +38,13 @@ namespace TeamUp
             Client = new FireSharp.FirebaseClient(Config);
             //Tbox_Search.Text = "Search Settings";
 
+            CheckLocaliz();
 
+
+        }
+
+        void CheckLocaliz()
+        {
             int resIndx = C_Localization.GetLanguage();
             if (resIndx == 3)
             {
@@ -56,7 +62,6 @@ namespace TeamUp
                 Localiz();
             }
         }
-
 
         void Localiz()
         {
@@ -332,19 +337,22 @@ namespace TeamUp
             Close();
         }
 
-        private void B_Rus_Click(object sender, RoutedEventArgs e)
+        public void B_Rus_Click(object sender, RoutedEventArgs e)
         {
-            C_Localization.SetLanguageRu(); 
+            C_Localization.SetLanguageRu();
+            CheckLocaliz();
         }
 
-        private void B_Ger_Click(object sender, RoutedEventArgs e)
+        public void B_Ger_Click(object sender, RoutedEventArgs e)
         {
             C_Localization.SetLanguageNem();
+            CheckLocaliz();
         }
 
-        private void B_En_Click(object sender, RoutedEventArgs e)
+        public void B_En_Click(object sender, RoutedEventArgs e)
         {
-            C_Localization.SetLanguageEn();
+            C_Localization.SetLanguageEn(); 
+            CheckLocaliz();
         }
     } 
 }
