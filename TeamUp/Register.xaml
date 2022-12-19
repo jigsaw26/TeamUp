@@ -9,7 +9,7 @@
         Title="Register"  Width="{x:Static SystemParameters.PrimaryScreenWidth}"
              Height="{x:Static SystemParameters.PrimaryScreenHeight}"
          MouseMove="FormRegistr_MouseMove"
-        MinWidth="720" MinHeight="480"
+        MinWidth="720" MinHeight="480" Icon="/logo 5 small-01.png"
         >
 
     <!--Height="1024" Width="1920" MinWidth="1440" MinHeight="924"-->

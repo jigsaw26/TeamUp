@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Messages" Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-             Height="{x:Static SystemParameters.PrimaryScreenHeight}" MouseMove="FormMessages_MouseMove">
+             Height="{x:Static SystemParameters.PrimaryScreenHeight}" MouseMove="FormMessages_MouseMove" Icon="/logo 5 small-01.png">
 
     <Window.Resources>
         <Style x:Key="BtnStyle">

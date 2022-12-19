@@ -104,14 +104,11 @@ namespace TeamUp
 
         public void RemMe_read()
         {
-
             using StreamReader file = new("autofill.txt");
             is_checked= file.ReadLine();
             email = file.ReadLine();
             password = file.ReadLine();
             file.Close();
-
-            
         }
 
         void LiveCall()

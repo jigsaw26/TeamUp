@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Home"  MouseMove="FormHome_MouseMove"
-        MinWidth="720" MinHeight="480">
+        MinWidth="720" MinHeight="480" Icon="/logo 5 small-01.png">
 
     <!--Height="1024" Width="1920" MinWidth="1440" MinHeight="924"-->
 

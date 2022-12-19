@@ -9,7 +9,7 @@
         Title="MainWindow" Width="{x:Static SystemParameters.PrimaryScreenWidth}"
              Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         MinWidth="720" MinHeight="480"
-        MouseMove="FormProfile_MouseMove">
+        MouseMove="FormProfile_MouseMove" Icon="/logo 5 small-01.png">
 
     <!--Height="1024" Width="1440" MinWidth="1440" MinHeight="924"-->
 

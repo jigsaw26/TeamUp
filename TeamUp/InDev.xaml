@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="InDev" Width="{x:Static SystemParameters.PrimaryScreenWidth}"
              Height="{x:Static SystemParameters.PrimaryScreenHeight}"
-        MouseMove="FormInDev_MouseMove">
+        MouseMove="FormInDev_MouseMove" Icon="/logo 5 small-01.png">
 
     <Window.Resources>
 

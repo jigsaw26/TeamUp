@@ -9,7 +9,7 @@
         Title="Messages" Width="{x:Static SystemParameters.PrimaryScreenWidth}"
              Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         MinWidth="720" MinHeight="480"
-        MouseMove="FormEvents_MouseMove">
+        MouseMove="FormEvents_MouseMove" Icon="/logo 5 small-01.png">
     <Window.Resources>
         <Style x:Key="BtnStyle">
             <Style.Setters>
